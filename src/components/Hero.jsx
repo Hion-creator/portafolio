@@ -61,7 +61,7 @@ const Hero = () => {
               transition={{ delay: 0.8 }}
             >
               <span className="hidden sm:inline">
-                Estudiante de Ingeniería en Sistemas apasionado por crear soluciones web innovadoras y escalables. 
+                Ingeniero en Sistemas apasionado por crear soluciones web innovadoras y escalables. 
                 Líder del proyecto <span className="text-primary-400 font-semibold">Lia</span>, chatbot inteligente 
                 para onboarding empresarial con IA generativa y LLMs.
               </span>
