@@ -1,0 +1,24 @@
+import react from "eslint-plugin-react";
+import hooks from "eslint-plugin-react-hooks";
+export default [
+  { ignores: ["dist/**", "node_modules/**"] },
+  {
+    files: ["src/**/*.{js,jsx}"],
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module",
+      parserOptions: { ecmaFeatures: { jsx: true } },
+    },
+    plugins: { react, "react-hooks": hooks },
+    settings: { react: { version: "detect" } },
+    rules: {
+      "react/jsx-key": "error",
+      "react/jsx-no-duplicate-props": "error",
+      "react/jsx-no-undef": "error",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "no-unreachable": "error",
+      "no-dupe-keys": "error",
+    },
+  },
+];
