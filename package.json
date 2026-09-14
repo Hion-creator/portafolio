@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://Hion-creator.github.io/portafolio",
+  "homepage": "https://andressalazar.tech",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -36,6 +36,6 @@
     "gh-pages": "^6.3.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13",
-    "vite": "^5.4.8"
+    "vite": "^6.4.3"
   }
 }
