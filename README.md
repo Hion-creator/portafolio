@@ -14,7 +14,7 @@ npm run build
 npm run preview
 ```
 
-La base `/portafolio/` se conserva para GitHub Pages. `npm run deploy` compila y publica en la rama `gh-pages`; ejecutarlo solo cuando se decida actualizar la web pública. Este rediseño se entrega como propuesta en una rama separada.
+El sitio público es https://andressalazar.tech. La base `/` y `public/CNAME` corresponden al dominio personalizado de GitHub Pages. `npm run deploy` compila y publica en la rama `gh-pages`; conserva el dominio y el archivo `.nojekyll` incluidos en `public/`.
 
 ## Contenido
 
@@ -22,6 +22,7 @@ La base `/portafolio/` se conserva para GitHub Pages. `npm run deploy` compila y
 - `src/components/Projects.jsx`: proyectos, filtros y detalles.
 - `src/components/Contact.jsx`: correo, teléfono y formulario para preparar un mensaje.
 - `src/components/Navbar.jsx`: navegación accesible y menú móvil.
+- `src/components/NeuralScene.jsx`: red neuronal de partículas con Canvas 2D, reacción al cursor, pausa y movimiento reducido.
 - `src/index.css`: diseño y adaptación responsive.
 - `docs/AUDITORIA.md`: hallazgos, límites y propuestas de nuevos proyectos.
 
@@ -29,7 +30,7 @@ El contacto abre la aplicación de correo del visitante y **no envía mensajes a
 
 No hay descarga de CV hasta disponer de un archivo o enlace real. La presentación pública de Lia no se etiqueta como demo. El código de Lia permanece privado. EMCALI figura como experiencia anterior; queda pendiente completar su fecha de finalización.
 
-La ilustración de la portada es CSS: no necesita WebGL ni una espera de carga. Se conservan las dependencias existentes para evitar cambios ajenos a la auditoría; los componentes antiguos sin uso quedan recuperables en el historial Git.
+La visualización de la portada usa Canvas 2D y no necesita WebGL ni una espera de carga. La animación se detiene fuera de pantalla o cuando la pestaña está oculta, limita su frecuencia a 30 fps y respeta `prefers-reduced-motion`. Se conservan las dependencias existentes; los componentes antiguos sin uso quedan recuperables en el historial Git.
 
 ## Validación en este entorno
 

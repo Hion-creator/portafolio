@@ -1,5 +1,13 @@
 # Auditoría del portafolio
 
+## Actualización del 14 de septiembre de 2026
+
+Se incorpora una esfera de partículas conectadas que representa una red neuronal. Incluye pulsos de información, respuesta suave al cursor, pausa/reanudación, variante estática para movimiento reducido y suspensión cuando la escena o pestaña no son visibles. Es una representación conceptual, no una visualización de inferencias reales.
+
+Se comprueba la portada en navegador de escritorio y móvil (390 px), el botón de pausa, el menú y el filtro de IA; no hay desbordamiento horizontal a ese ancho. Compilación y lint correctos. La revisión histórica siguiente corresponde al 9 de septiembre.
+
+La rama publicada contiene un `CNAME` para `andressalazar.tech`. Se ajusta Vite a la base `/` y se incorpora `public/CNAME` para preservar ese dominio en posteriores publicaciones.
+
 Fecha: 9 de septiembre de 2026. Base revisada: `636c8ebaaff6f9dcd14e8712407e69412b55bf2d`.
 
 ## Hallazgos y correcciones

@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import NeuralScene from "./components/NeuralScene";
 import {
   ArrowUpRight,
   Github,
@@ -56,34 +57,7 @@ export default function App() {
               </a>
             </div>
           </div>
-          <a
-            className="hero-art"
-            href="#projects"
-            aria-label="Explorar mis proyectos de IA y desarrollo web"
-          >
-            <div className="art-top">
-              <span>EXPLORACIÓN 01</span>
-              <span>LLMs / IA LOCAL</span>
-            </div>
-            <div className="orbital" aria-hidden="true">
-              <div className="orbit o1" />
-              <div className="orbit o2" />
-              <div className="orbit o3" />
-              <div className="core">
-                L<span>IA</span>
-              </div>
-              <span className="orbit-label label-a">Contexto</span>
-              <span className="orbit-label label-b">Conocimiento</span>
-              <span className="orbit-label label-c">Respuesta</span>
-            </div>
-            <div className="art-bottom">
-              <div>
-                <small>PROYECTO DESTACADO</small>
-                <strong>Inteligencia con contexto.</strong>
-              </div>
-              <ArrowUpRight />
-            </div>
-          </a>
+          <NeuralScene />
         </section>
         <div className="expertise-strip">
           <div className="wrap">

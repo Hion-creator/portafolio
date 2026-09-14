@@ -905,3 +905,162 @@ footer .brand {
     transition: none !important;
   }
 }
+
+/* Neural visualization: the text remains independent of the canvas. */
+.neural-card {
+  margin: 0;
+  min-width: 0;
+  min-height: 495px;
+  background: radial-gradient(
+    ellipse at 50% 40%,
+    #26352b 0%,
+    #171e1b 50%,
+    #121816 100%
+  );
+}
+.neural-card .art-top {
+  position: relative;
+  z-index: 1;
+  gap: 16px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+.neural-index {
+  white-space: nowrap;
+  color: #9cac9e;
+}
+.neural-stage {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  isolation: isolate;
+}
+.neural-stage canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.neural-cross {
+  position: absolute;
+  font: 18px monospace;
+  color: #728275;
+  top: 12px;
+  left: 24px;
+}
+.neural-caption {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font: 12px monospace;
+  color: #a6b6a6;
+  letter-spacing: 0.7px;
+  pointer-events: none;
+}
+.neural-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 22px 12px;
+  gap: 12px;
+  color: #a6b6a6;
+  font-size: 12px;
+}
+.neural-toolbar button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  border: 1px solid #465c49;
+  border-radius: 4px;
+  color: #d4e6cc;
+  background: #1f2b22;
+  padding: 7px 10px;
+  font-size: 12px;
+}
+.neural-toolbar button:hover:not(:disabled) {
+  background: #34452d;
+}
+.neural-toolbar button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.neural-card .art-bottom {
+  gap: 12px;
+  padding: 20px 22px;
+}
+.neural-card .art-bottom strong {
+  font-size: 17px;
+  line-height: 1.5;
+}
+.neural-card .art-bottom a {
+  min-width: 44px;
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #43513d;
+  border-radius: 50%;
+}
+.neural-fallback {
+  position: absolute;
+  inset: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #83a96a;
+  border-radius: 50%;
+  color: var(--accent);
+  font-size: 58px;
+  background: radial-gradient(circle, #34452d, transparent);
+}
+@media (max-width: 1000px) {
+  .neural-stage {
+    height: 300px;
+  }
+  .neural-card .art-top {
+    flex-wrap: wrap;
+  }
+  .neural-index {
+    display: none;
+  }
+  .neural-toolbar {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 760px) {
+  .neural-stage {
+    height: 330px;
+  }
+  .neural-card {
+    min-height: 460px;
+  }
+  .neural-index {
+    display: inline;
+  }
+  .neural-card .art-bottom strong {
+    font-size: 18px;
+  }
+}
+@media (max-width: 380px) {
+  .neural-stage {
+    height: 275px;
+  }
+  .neural-caption {
+    font-size: 12px;
+    letter-spacing: 0;
+    left: 16px;
+    right: 16px;
+  }
+  .neural-card .art-top {
+    font-size: 12px;
+    padding: 18px 16px;
+  }
+  .neural-index {
+    display: none;
+  }
+  .neural-card .art-bottom strong {
+    font-size: 16px;
+  }
+}
