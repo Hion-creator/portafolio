@@ -1,0 +1,19 @@
+{
+  "name": "lia-public-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4400",
+    "build": "vite build",
+    "test": "node --test src/knowledge.test.js"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "lucide-react": "0.446.0"
+  },
+  "devDependencies": {
+    "vite": "6.4.3"
+  }
+}

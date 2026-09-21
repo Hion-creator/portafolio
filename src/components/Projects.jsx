@@ -3,7 +3,6 @@ import {
   ArrowUpRight,
   Github,
   FileText,
-  BrainCircuit,
   Monitor,
 } from "lucide-react";
 export default function Projects() {
@@ -58,27 +57,12 @@ export default function Projects() {
         </article>
         {filter !== "frontend" && (
           <article className="project-card" id="lia">
-            <div className="project-visual lia-visual">
-              <div className="visual-caption">
-                <BrainCircuit size={18} />
-                <span>LIA / ASISTENTE DE ONBOARDING</span>
-              </div>
-              <div
-                className="flow-diagram"
-                aria-label="Concepto de Lia: conocimiento empresarial, contexto y asistente"
-              >
-                <span>
-                  Conocimiento
-                  <br />
-                  empresarial
-                </span>
-                <b aria-hidden="true">→</b>
-                <span>Contexto</span>
-                <b aria-hidden="true">→</b>
-                <strong>Lia</strong>
-              </div>
-              <small>IA GENERATIVA · MODELOS LOCALES</small>
-            </div>
+            <a className="lia-demo-preview" href="/proyectos/lia/" aria-label="Abrir la demo de Lia">
+              <div className="lia-mini-header"><span>✦ lia.</span><small>DEMO INTERACTIVA</small></div>
+              <div className="lia-mini-question">¿Qué hago en mi primer día?</div>
+              <div className="lia-mini-answer"><span>✦</span><div>Un nuevo comienzo, con contexto.<br/><small>Conoce al equipo y prepara tus accesos.</small></div></div>
+              <div className="lia-mini-source"><FileText size={14} /> Manual de bienvenida <span>Pág. 1 ↗</span></div>
+            </a>
             <div className="project-content">
               <p className="eyebrow">
                 INTELIGENCIA ARTIFICIAL / PROYECTO DE TESIS
@@ -90,7 +74,7 @@ export default function Projects() {
                 de lenguaje.
               </p>
               <div className="tags">
-                {["Python", "Ollama", "LangChain", "React", "RAG"].map((t) => (
+                {["Python", "Ollama", "FastAPI", "React", "RAG"].map((t) => (
                   <span key={t}>{t}</span>
                 ))}
               </div>
@@ -107,10 +91,11 @@ export default function Projects() {
                 </p>
                 <p>
                   <strong>Mi rol:</strong> liderazgo del desarrollo. La
-                  presentación describe el proyecto; no es una demo interactiva.
+                  demo pública permite explorar preguntas, fuentes y el recorrido de bienvenida con datos ficticios y respuestas simuladas. El sistema con modelos locales permanece en el repositorio privado.
                 </p>
               </details>
               <div className="project-links">
+                <a href="/proyectos/lia/">Probar demo <ArrowUpRight size={17} /></a>
                 <a
                   href="https://hion-creator.github.io/presentacion-chatbot/"
                   target="_blank"
