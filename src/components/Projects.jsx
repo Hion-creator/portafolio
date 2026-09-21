@@ -32,9 +32,30 @@ export default function Projects() {
         </div>
       </div>
       <p className="sr-only" role="status">
-        {filter === "all" ? "2 proyectos" : "1 proyecto"}
+        {filter === "all" ? "3 proyectos" : "2 proyectos"}
       </p>
       <div className="project-grid">
+        <article className="project-card pulso-card" id="pulso">
+          <a className="pulso-preview" href="/proyectos/pulso/" aria-label="Abrir la demo de Pulso">
+            <img src="/images/pulso-desktop.png" alt="Pulso: bandeja de soporte con tickets y copiloto" loading="lazy" width="1440" height="1220" />
+          </a>
+          <div className="project-content">
+            <p className="eyebrow">ANGULAR / TAILWIND / ASISTENCIA CON IA</p>
+            <h3>Pulso. Soporte con intención.</h3>
+            <p>Un panel de atención al cliente para organizar tickets, priorizar solicitudes y preparar respuestas con ayuda de un copiloto. Cada sugerencia queda en manos de la persona.</p>
+            <div className="tags">{["Angular", "Tailwind CSS", "TypeScript", "Python", "Ollama"].map(t => <span key={t}>{t}</span>)}</div>
+            <details>
+              <summary>Qué demuestra este proyecto</summary>
+              <p><strong>Frontend:</strong> Signals, rutas diferidas, formularios reactivos y una interfaz adaptable. Tickets, filtros, métricas y borradores persistidos en el navegador.</p>
+              <p><strong>IA:</strong> integración local con Ollama a través de FastAPI, con respuestas estructuradas y revisión humana. La demo pública utiliza reglas y plantillas; no ejecuta un modelo de IA.</p>
+              <p><strong>Validación:</strong> pruebas de API y recorridos en navegador. Los datos son ficticios y no se envían mensajes a clientes.</p>
+            </details>
+            <div className="project-links">
+              <a href="/proyectos/pulso/">Probar demo <ArrowUpRight size={17} /></a>
+              <a href="https://github.com/Hion-creator/portafolio/tree/main/projects/pulso" target="_blank" rel="noreferrer"><Github size={17} /> Código</a>
+            </div>
+          </div>
+        </article>
         {filter !== "frontend" && (
           <article className="project-card" id="lia">
             <div className="project-visual lia-visual">

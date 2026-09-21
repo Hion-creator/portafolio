@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "cli": {
+    "analytics": false
+  },
+  "projects": {
+    "pulso-desk": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "tsConfig": "tsconfig.json",
+            "index": "src/index.html",
+            "styles": [
+              "src/styles.generated.css"
+            ],
+            "outputPath": "dist/pulso-desk",
+            "main": "src/main.ts",
+            "buildOptimizer": false
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "all",
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "1MB",
+                  "maximumError": "2MB"
+                }
+              ]
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "pulso-desk:build:development",
+            "proxyConfig": "proxy.conf.json"
+          }
+        }
+      }
+    }
+  }
+}
