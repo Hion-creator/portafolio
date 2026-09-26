@@ -31,9 +31,30 @@ export default function Projects() {
         </div>
       </div>
       <p className="sr-only" role="status">
-        {filter === "all" ? "3 proyectos" : "2 proyectos"}
+        {filter === "all" ? "4 proyectos" : filter === "ia" ? "3 proyectos" : "2 proyectos"}
       </p>
       <div className="project-grid">
+        {filter !== "frontend" && (
+          <article className="project-card" id="espacioclip">
+            <a href="/proyectos/espacioclip/" aria-label="Ver el video de EspacioClip Studio">
+              <img src="/proyectos/espacioclip/portada.jpg" alt="EspacioClip Studio: del directo al clip" loading="lazy" width="1920" height="1080" style={{ width: "100%", height: "auto", display: "block" }} />
+            </a>
+            <div className="project-content">
+              <p className="eyebrow">IA LOCAL / VIDEO / V1 EN DESARROLLO</p>
+              <h3>EspacioClip Studio. Del directo al clip.</h3>
+              <p>Un editor local para convertir momentos de streams en clips verticales: juego y cámara separados, títulos configurables, subtítulos editables y revisión de intervalos con pitidos.</p>
+              <div className="tags">{["Python", "FastAPI", "Whisper", "FFmpeg", "Ollama"].map(t => <span key={t}>{t}</span>)}</div>
+              <details>
+                <summary>Enfoque y estado del proyecto</summary>
+                <p><strong>Mi rol:</strong> definición del producto, diseño del flujo y desarrollo iterativo con asistencia de IA.</p>
+                <p><strong>Estado:</strong> primera versión funcional para Windows. En evolución: precisión de subtítulos, instalación y pruebas con más creadores.</p>
+                <p><strong>Presentación:</strong> recorrido visual de 32 segundos con capturas reales. El procesamiento y el código del producto permanecen privados.</p>
+              </details>
+              <div className="project-links"><a href="/proyectos/espacioclip/">Ver video <ArrowUpRight size={17} /></a><span className="muted">Código privado</span></div>
+            </div>
+          </article>
+        )}
+
         <article className="project-card pulso-card" id="pulso">
           <a className="pulso-preview" href="/proyectos/pulso/" aria-label="Abrir la demo de Pulso">
             <img src="/images/pulso-desktop.png" alt="Pulso: bandeja de soporte con tickets y copiloto" loading="lazy" width="1440" height="1220" />
