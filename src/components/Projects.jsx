@@ -31,9 +31,36 @@ export default function Projects() {
         </div>
       </div>
       <p className="sr-only" role="status">
-        {filter === "all" ? "4 proyectos" : filter === "ia" ? "3 proyectos" : "2 proyectos"}
+        {filter === "all" ? "5 proyectos" : filter === "ia" ? "4 proyectos" : "2 proyectos"}
       </p>
       <div className="project-grid">
+        {filter !== "frontend" && (
+          <article className="project-card" id="decision-lab">
+            <a className="decision-preview" href="/proyectos/decision-lab/" aria-label="Explorar las pruebas reales de Decision Lab">
+              <span>DECISION LAB / OLLAMA LOCAL</span>
+              <strong>Decidir mejor.<br />Con contexto.</strong>
+              <div><span>Nimble</span><span>↔</span><span>Qwen</span></div>
+              <small>RAG · CALIDAD · TIEMPOS · COSTOS</small>
+            </a>
+            <div className="project-content">
+              <p className="eyebrow">IA LOCAL / EXPERIMENTO REPRODUCIBLE</p>
+              <h3>Decision Lab. IA con evidencia.</h3>
+              <p>Comparación de Nimble y Qwen al clasificar requerimientos, con y sin documentos recuperados. Explora respuestas reales, fuentes, errores, tiempos locales y escenarios de costos.</p>
+              <div className="tags">{["Python", "Ollama", "System One", "RAG", "Evaluación"].map(t => <span key={t}>{t}</span>)}</div>
+              <details>
+                <summary>Qué demuestra este proyecto</summary>
+                <p><strong>Mi rol:</strong> diseño del experimento, construcción del flujo y revisión de resultados con asistencia de IA.</p>
+                <p><strong>Prueba:</strong> 24 casos ficticios, dos repeticiones y tres condiciones por modelo: sin contexto, RAG y fuente correcta como diagnóstico. Permisos, vigencia y contrato de salida se validan en el backend.</p>
+                <p><strong>Publicación:</strong> resultados guardados de inferencias locales; no ejecuta un modelo en el navegador. El código permite reproducir las pruebas con Ollama. Los costos humanos y eléctricos son supuestos ajustables.</p>
+              </details>
+              <div className="project-links">
+                <a href="/proyectos/decision-lab/">Explorar evidencia <ArrowUpRight size={17} /></a>
+                <a href="https://github.com/Hion-creator/portafolio/tree/main/projects/decision-lab" target="_blank" rel="noreferrer"><Github size={17} /> Código</a>
+              </div>
+            </div>
+          </article>
+        )}
+
         {filter !== "frontend" && (
           <article className="project-card" id="espacioclip">
             <a href="/proyectos/espacioclip/" aria-label="Ver el video de EspacioClip Studio">

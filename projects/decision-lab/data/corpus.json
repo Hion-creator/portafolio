@@ -1,0 +1,291 @@
+[
+  {
+    "id": "cat-mq27",
+    "title": "Catálogo Atlas: MQ-27",
+    "aliases": [
+      "MQ-27"
+    ],
+    "text": "MQ-27 es la autorización de lectura de reportes de Atlas. Su habilitación o reparación se tramita como un permiso de usuario; no es una capacidad nueva ni un cobro.",
+    "active": true,
+    "roles": [
+      "mesa"
+    ],
+    "version": "2",
+    "section": "Definición del código",
+    "valid_from": "2026-09-01",
+    "valid_until": null,
+    "source": "data/documents/cat-mq27.md"
+  },
+  {
+    "id": "cat-hp64",
+    "title": "Catálogo Nexo: HP-64",
+    "aliases": [
+      "HP-64"
+    ],
+    "text": "HP-64 es la recuperación de credenciales para el ingreso a Nexo. Los eventos de este código corresponden a autenticación y acceso de usuarios.",
+    "active": true,
+    "roles": [
+      "mesa"
+    ],
+    "version": "2",
+    "section": "Definición del código",
+    "valid_from": "2026-09-01",
+    "valid_until": null,
+    "source": "data/documents/cat-hp64.md"
+  },
+  {
+    "id": "cat-ux41",
+    "title": "Catálogo Arce: UX-41",
+    "aliases": [
+      "UX-41"
+    ],
+    "text": "UX-41 identifica ajustes del importe monetario cobrado por una suscripción de Arce. Un evento de este código pide revisar cargos, pagos o devoluciones, no programar una función.",
+    "active": true,
+    "roles": [
+      "mesa"
+    ],
+    "version": "2",
+    "section": "Definición del código",
+    "valid_from": "2026-09-01",
+    "valid_until": null,
+    "source": "data/documents/cat-ux41.md"
+  },
+  {
+    "id": "cat-bk73",
+    "title": "Catálogo Lince: BK-73",
+    "aliases": [
+      "BK-73"
+    ],
+    "text": "BK-73 identifica conciliación del dinero pagado frente al saldo de facturas de Lince. El trámite trata de cobros y pagos, no de credenciales o fallos de una pantalla.",
+    "active": true,
+    "roles": [
+      "mesa"
+    ],
+    "version": "2",
+    "section": "Definición del código",
+    "valid_from": "2026-09-01",
+    "valid_until": null,
+    "source": "data/documents/cat-bk73.md"
+  },
+  {
+    "id": "cat-yt83",
+    "title": "Catálogo Sira: YT-83",
+    "aliases": [
+      "YT-83"
+    ],
+    "text": "YT-83 identifica una avería de la búsqueda de inventario ya implementada en Sira. No representa credenciales, permisos, pagos ni una función nueva.",
+    "active": true,
+    "roles": [
+      "mesa"
+    ],
+    "version": "2",
+    "section": "Definición del código",
+    "valid_from": "2026-09-01",
+    "valid_until": null,
+    "source": "data/documents/cat-yt83.md"
+  },
+  {
+    "id": "cat-vf36",
+    "title": "Catálogo Marea: VF-36",
+    "aliases": [
+      "VF-36"
+    ],
+    "text": "VF-36 identifica un error de guardado de pedidos en Marea, una función existente. No está asociado a login, perfiles, facturas o dinero.",
+    "active": true,
+    "roles": [
+      "mesa"
+    ],
+    "version": "2",
+    "section": "Definición del código",
+    "valid_from": "2026-09-01",
+    "valid_until": null,
+    "source": "data/documents/cat-vf36.md"
+  },
+  {
+    "id": "cat-rd56",
+    "title": "Catálogo Vela: RD-56",
+    "aliases": [
+      "RD-56"
+    ],
+    "text": "RD-56 es la propuesta de incorporar exportación de tareas a CSV en Vela. Esa capacidad no existe todavía y requiere un desarrollo nuevo; no es corregir una función existente.",
+    "active": true,
+    "roles": [
+      "mesa"
+    ],
+    "version": "2",
+    "section": "Definición del código",
+    "valid_from": "2026-09-01",
+    "valid_until": null,
+    "source": "data/documents/cat-rd56.md"
+  },
+  {
+    "id": "cat-pl92",
+    "title": "Catálogo Bruma: PL-92",
+    "aliases": [
+      "PL-92"
+    ],
+    "text": "PL-92 es la solicitud de construir asignación de responsables en lote en Bruma. La función aún no está implementada; tramitar el código significa pedir un cambio funcional.",
+    "active": true,
+    "roles": [
+      "mesa"
+    ],
+    "version": "2",
+    "section": "Definición del código",
+    "valid_from": "2026-09-01",
+    "valid_until": null,
+    "source": "data/documents/cat-pl92.md"
+  },
+  {
+    "id": "dev-aa",
+    "title": "Catálogo desarrollo Duna: AA-11",
+    "aliases": [
+      "AA-11"
+    ],
+    "text": "AA-11 significa habilitar un permiso de lectura en Duna.",
+    "active": true,
+    "roles": [
+      "mesa"
+    ],
+    "version": "2",
+    "section": "Definición del código",
+    "valid_from": "2026-09-01",
+    "valid_until": null,
+    "source": "data/documents/dev-aa.md"
+  },
+  {
+    "id": "dev-bb",
+    "title": "Catálogo desarrollo Pino: BB-22",
+    "aliases": [
+      "BB-22"
+    ],
+    "text": "BB-22 identifica el ajuste del valor monetario cobrado en una factura de Pino.",
+    "active": true,
+    "roles": [
+      "mesa"
+    ],
+    "version": "2",
+    "section": "Definición del código",
+    "valid_from": "2026-09-01",
+    "valid_until": null,
+    "source": "data/documents/dev-bb.md"
+  },
+  {
+    "id": "dev-cc",
+    "title": "Catálogo desarrollo Olmo: CC-33",
+    "aliases": [
+      "CC-33"
+    ],
+    "text": "CC-33 identifica una avería de la búsqueda existente de Olmo, sin relación con permisos o dinero.",
+    "active": true,
+    "roles": [
+      "mesa"
+    ],
+    "version": "2",
+    "section": "Definición del código",
+    "valid_from": "2026-09-01",
+    "valid_until": null,
+    "source": "data/documents/dev-cc.md"
+  },
+  {
+    "id": "dev-dd",
+    "title": "Catálogo desarrollo FaroDemo: DD-44",
+    "aliases": [
+      "DD-44"
+    ],
+    "text": "DD-44 corresponde a una capacidad futura de agenda de tareas de FaroDemo que aún no existe.",
+    "active": true,
+    "roles": [
+      "mesa"
+    ],
+    "version": "2",
+    "section": "Definición del código",
+    "valid_from": "2026-09-01",
+    "valid_until": null,
+    "source": "data/documents/dev-dd.md"
+  },
+  {
+    "id": "old-mq27",
+    "title": "Atlas: ficha antigua MQ-27",
+    "aliases": [
+      "MQ-27"
+    ],
+    "text": "La versión anterior asociaba MQ-27 a un cargo de factura. Está retirada y no se aplica.",
+    "active": false,
+    "roles": [
+      "mesa"
+    ],
+    "version": "1",
+    "section": "Definición del código",
+    "valid_from": "2026-09-01",
+    "valid_until": null,
+    "source": "data/documents/old-mq27.md"
+  },
+  {
+    "id": "private-zx90",
+    "title": "Ficha restringida ZX-90",
+    "aliases": [
+      "ZX-90"
+    ],
+    "text": "ZX-90 identifica un permiso reservado de Tesorería.",
+    "active": true,
+    "roles": [
+      "finanzas"
+    ],
+    "version": "2",
+    "section": "Definición del código",
+    "valid_from": "2026-09-01",
+    "valid_until": null,
+    "source": "data/documents/private-zx90.md"
+  },
+  {
+    "id": "expired-tt18",
+    "title": "Ficha retirada TT-18",
+    "aliases": [
+      "TT-18"
+    ],
+    "text": "TT-18 identifica un error antiguo de un servicio retirado.",
+    "active": false,
+    "roles": [
+      "mesa"
+    ],
+    "version": "2",
+    "section": "Definición del código",
+    "valid_from": "2026-09-01",
+    "valid_until": null,
+    "source": "data/documents/expired-tt18.md"
+  },
+  {
+    "id": "noise-seguridad",
+    "title": "Glosario de seguridad",
+    "aliases": [
+      "SEG-00"
+    ],
+    "text": "Una contraseña es una credencial. Nunca se habilitan accesos automáticamente a partir de la probabilidad de un modelo.",
+    "active": true,
+    "roles": [
+      "mesa"
+    ],
+    "version": "2",
+    "section": "Definición del código",
+    "valid_from": "2026-09-01",
+    "valid_until": null,
+    "source": "data/documents/noise-seguridad.md"
+  },
+  {
+    "id": "noise-facturas",
+    "title": "Glosario de facturas",
+    "aliases": [
+      "FAC-00"
+    ],
+    "text": "Las facturas registran valores monetarios. Los pagos concilian saldos; una petición de una función nueva sigue siendo un cambio de software.",
+    "active": true,
+    "roles": [
+      "mesa"
+    ],
+    "version": "2",
+    "section": "Definición del código",
+    "valid_from": "2026-09-01",
+    "valid_until": null,
+    "source": "data/documents/noise-facturas.md"
+  }
+]

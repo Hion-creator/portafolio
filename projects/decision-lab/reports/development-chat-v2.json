@@ -1,0 +1,460 @@
+[
+  {
+    "engine": "chat",
+    "mode": "rag",
+    "model": "qwen3:1.7b",
+    "ok": true,
+    "result": {
+      "route": "revision",
+      "ready": true,
+      "urgency_level": 0,
+      "probabilities": null,
+      "confidence": null,
+      "ready_probability": null,
+      "urgency_score": null,
+      "urgency_probabilities": null
+    },
+    "raw": {
+      "model": "qwen3:1.7b",
+      "created_at": "2026-10-02T18:46:31.9898589Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"route\": \"revision\", \"ready\": true, \"urgency_level\": 0}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 669706900,
+      "load_duration": 3322400,
+      "prompt_eval_count": 849,
+      "prompt_eval_cached_count": 3,
+      "prompt_eval_duration": 391890000,
+      "eval_count": 20,
+      "eval_duration": 198970000
+    },
+    "sources": [
+      {
+        "id": "dev-aa",
+        "title": "Catálogo desarrollo Duna: AA-11",
+        "source": "data/documents/dev-aa.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "AA-11 significa habilitar un permiso de lectura en Duna.",
+        "retrieval_score": 15.932853
+      },
+      {
+        "id": "cat-rd56",
+        "title": "Catálogo Vela: RD-56",
+        "source": "data/documents/cat-rd56.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "RD-56 es la propuesta de incorporar exportación de tareas a CSV en Vela. Esa capacidad no existe todavía y requiere un desarrollo nuevo; no es corregir una función existente.",
+        "retrieval_score": 0.731114
+      }
+    ],
+    "metrics": {
+      "wall_seconds": 0.700881600001594,
+      "retrieval_seconds": 0.0009932000102708116,
+      "inference_seconds": 0.6998858000006294,
+      "server_seconds": 0.6697069,
+      "load_seconds": 0.0033224,
+      "input_tokens": 849,
+      "output_tokens": 20
+    },
+    "packet": {
+      "original_requirement": "Tramiten AA-11 de Duna para completar su propósito. No hay impacto operativo actual.",
+      "suggested_owner": "Revisión de alcance",
+      "status": "pendiente_revision",
+      "impact": "rutina",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D01",
+    "expected": {
+      "route": "acceso",
+      "ready": true,
+      "urgency_level": 0
+    }
+  },
+  {
+    "engine": "chat",
+    "mode": "rag",
+    "model": "qwen3:1.7b",
+    "ok": true,
+    "result": {
+      "route": "revision",
+      "ready": true,
+      "urgency_level": 0,
+      "probabilities": null,
+      "confidence": null,
+      "ready_probability": null,
+      "urgency_score": null,
+      "urgency_probabilities": null
+    },
+    "raw": {
+      "model": "qwen3:1.7b",
+      "created_at": "2026-10-02T18:46:32.2617493Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"route\": \"revision\", \"ready\": true, \"urgency_level\": 0}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 269229500,
+      "load_duration": 2603800,
+      "prompt_eval_count": 853,
+      "prompt_eval_cached_count": 632,
+      "prompt_eval_duration": 60522000,
+      "eval_count": 20,
+      "eval_duration": 199600000
+    },
+    "sources": [
+      {
+        "id": "dev-bb",
+        "title": "Catálogo desarrollo Pino: BB-22",
+        "source": "data/documents/dev-bb.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "BB-22 identifica el ajuste del valor monetario cobrado en una factura de Pino.",
+        "retrieval_score": 15.650852
+      },
+      {
+        "id": "cat-rd56",
+        "title": "Catálogo Vela: RD-56",
+        "source": "data/documents/cat-rd56.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "RD-56 es la propuesta de incorporar exportación de tareas a CSV en Vela. Esa capacidad no existe todavía y requiere un desarrollo nuevo; no es corregir una función existente.",
+        "retrieval_score": 0.731114
+      }
+    ],
+    "metrics": {
+      "wall_seconds": 0.27174889999150764,
+      "retrieval_seconds": 0.0010517999908188358,
+      "inference_seconds": 0.2706941999931587,
+      "server_seconds": 0.2692295,
+      "load_seconds": 0.0026038,
+      "input_tokens": 853,
+      "output_tokens": 20
+    },
+    "packet": {
+      "original_requirement": "Tramiten BB-22 de Pino para completar su propósito. No hay impacto operativo actual.",
+      "suggested_owner": "Revisión de alcance",
+      "status": "pendiente_revision",
+      "impact": "rutina",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D02",
+    "expected": {
+      "route": "facturacion",
+      "ready": true,
+      "urgency_level": 0
+    }
+  },
+  {
+    "engine": "chat",
+    "mode": "rag",
+    "model": "qwen3:1.7b",
+    "ok": true,
+    "result": {
+      "route": "revision",
+      "ready": true,
+      "urgency_level": 0,
+      "probabilities": null,
+      "confidence": null,
+      "ready_probability": null,
+      "urgency_score": null,
+      "urgency_probabilities": null
+    },
+    "raw": {
+      "model": "qwen3:1.7b",
+      "created_at": "2026-10-02T18:46:32.5486705Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"route\": \"revision\", \"ready\": true, \"urgency_level\": 0}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 271523700,
+      "load_duration": 3908700,
+      "prompt_eval_count": 857,
+      "prompt_eval_cached_count": 632,
+      "prompt_eval_duration": 63886000,
+      "eval_count": 20,
+      "eval_duration": 197519000
+    },
+    "sources": [
+      {
+        "id": "dev-cc",
+        "title": "Catálogo desarrollo Olmo: CC-33",
+        "source": "data/documents/dev-cc.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "CC-33 identifica una avería de la búsqueda existente de Olmo, sin relación con permisos o dinero.",
+        "retrieval_score": 15.38854
+      },
+      {
+        "id": "cat-rd56",
+        "title": "Catálogo Vela: RD-56",
+        "source": "data/documents/cat-rd56.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "RD-56 es la propuesta de incorporar exportación de tareas a CSV en Vela. Esa capacidad no existe todavía y requiere un desarrollo nuevo; no es corregir una función existente.",
+        "retrieval_score": 0.731114
+      }
+    ],
+    "metrics": {
+      "wall_seconds": 0.2869127000012668,
+      "retrieval_seconds": 0.001172100004623644,
+      "inference_seconds": 0.2857367999968119,
+      "server_seconds": 0.2715237,
+      "load_seconds": 0.0039087,
+      "input_tokens": 857,
+      "output_tokens": 20
+    },
+    "packet": {
+      "original_requirement": "Tramiten CC-33 de Olmo para completar su propósito. No hay impacto operativo actual.",
+      "suggested_owner": "Revisión de alcance",
+      "status": "pendiente_revision",
+      "impact": "rutina",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D03",
+    "expected": {
+      "route": "incidente",
+      "ready": true,
+      "urgency_level": 0
+    }
+  },
+  {
+    "engine": "chat",
+    "mode": "rag",
+    "model": "qwen3:1.7b",
+    "ok": true,
+    "result": {
+      "route": "mejora",
+      "ready": true,
+      "urgency_level": 0,
+      "probabilities": null,
+      "confidence": null,
+      "ready_probability": null,
+      "urgency_score": null,
+      "urgency_probabilities": null
+    },
+    "raw": {
+      "model": "qwen3:1.7b",
+      "created_at": "2026-10-02T18:46:32.8403072Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"route\": \"mejora\", \"ready\": true, \"urgency_level\": 0}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 289553200,
+      "load_duration": 2591300,
+      "prompt_eval_count": 856,
+      "prompt_eval_cached_count": 632,
+      "prompt_eval_duration": 60411000,
+      "eval_count": 22,
+      "eval_duration": 219563000
+    },
+    "sources": [
+      {
+        "id": "dev-dd",
+        "title": "Catálogo desarrollo FaroDemo: DD-44",
+        "source": "data/documents/dev-dd.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "DD-44 corresponde a una capacidad futura de agenda de tareas de FaroDemo que aún no existe.",
+        "retrieval_score": 15.990378
+      },
+      {
+        "id": "cat-rd56",
+        "title": "Catálogo Vela: RD-56",
+        "source": "data/documents/cat-rd56.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "RD-56 es la propuesta de incorporar exportación de tareas a CSV en Vela. Esa capacidad no existe todavía y requiere un desarrollo nuevo; no es corregir una función existente.",
+        "retrieval_score": 0.731114
+      }
+    ],
+    "metrics": {
+      "wall_seconds": 0.29163780000817496,
+      "retrieval_seconds": 0.001011500004096888,
+      "inference_seconds": 0.2906236999988323,
+      "server_seconds": 0.2895532,
+      "load_seconds": 0.0025913,
+      "input_tokens": 856,
+      "output_tokens": 22
+    },
+    "packet": {
+      "original_requirement": "Tramiten DD-44 de FaroDemo para completar su propósito. No hay impacto operativo actual.",
+      "suggested_owner": "Producto",
+      "status": "ficha_preparada",
+      "impact": "rutina",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D04",
+    "expected": {
+      "route": "mejora",
+      "ready": true,
+      "urgency_level": 0
+    }
+  },
+  {
+    "engine": "chat",
+    "mode": "rag",
+    "model": "qwen3:1.7b",
+    "ok": true,
+    "result": {
+      "route": "acceso",
+      "ready": true,
+      "urgency_level": 0,
+      "probabilities": null,
+      "confidence": null,
+      "ready_probability": null,
+      "urgency_score": null,
+      "urgency_probabilities": null
+    },
+    "raw": {
+      "model": "qwen3:1.7b",
+      "created_at": "2026-10-02T18:46:33.0711702Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"route\":\"acceso\",\"ready\":true,\"urgency_level\":0}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 207327900,
+      "load_duration": 2823800,
+      "prompt_eval_count": 747,
+      "prompt_eval_cached_count": 629,
+      "prompt_eval_duration": 35914000,
+      "eval_count": 17,
+      "eval_duration": 162617000
+    },
+    "sources": [
+      {
+        "id": "noise-seguridad",
+        "title": "Glosario de seguridad",
+        "source": "data/documents/noise-seguridad.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "Una contraseña es una credencial. Nunca se habilitan accesos automáticamente a partir de la probabilidad de un modelo.",
+        "retrieval_score": 2.661948
+      }
+    ],
+    "metrics": {
+      "wall_seconds": 0.23073250000015832,
+      "retrieval_seconds": 0.0010540999937802553,
+      "inference_seconds": 0.2296762000041781,
+      "server_seconds": 0.2073279,
+      "load_seconds": 0.0028238,
+      "input_tokens": 747,
+      "output_tokens": 17
+    },
+    "packet": {
+      "original_requirement": "Necesito recuperar mi contraseña del portal; puedo seguir temporalmente con el canal autorizado.",
+      "suggested_owner": "Administración de acceso",
+      "status": "ficha_preparada",
+      "impact": "rutina",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D05",
+    "expected": {
+      "route": "acceso",
+      "ready": true,
+      "urgency_level": 1
+    }
+  },
+  {
+    "engine": "chat",
+    "mode": "rag",
+    "model": "qwen3:1.7b",
+    "ok": true,
+    "result": {
+      "route": "revision",
+      "ready": true,
+      "urgency_level": 0,
+      "probabilities": null,
+      "confidence": null,
+      "ready_probability": null,
+      "urgency_score": null,
+      "urgency_probabilities": null
+    },
+    "raw": {
+      "model": "qwen3:1.7b",
+      "created_at": "2026-10-02T18:46:33.2807432Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"route\":\"revision\",\"ready\":true,\"urgency_level\":0}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 182940500,
+      "load_duration": 3472600,
+      "prompt_eval_count": 656,
+      "prompt_eval_cached_count": 629,
+      "prompt_eval_duration": 19974000,
+      "eval_count": 16,
+      "eval_duration": 154100000
+    },
+    "sources": [],
+    "metrics": {
+      "wall_seconds": 0.20969410000543576,
+      "retrieval_seconds": 0.0009093000116990879,
+      "inference_seconds": 0.2087835999991512,
+      "server_seconds": 0.1829405,
+      "load_seconds": 0.0034726,
+      "input_tokens": 656,
+      "output_tokens": 16
+    },
+    "packet": {
+      "original_requirement": "Hola, hagan algo con eso.",
+      "suggested_owner": "Revisión de alcance",
+      "status": "pendiente_revision",
+      "impact": "rutina",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D06",
+    "expected": {
+      "route": "revision",
+      "ready": false,
+      "urgency_level": 0
+    }
+  }
+]

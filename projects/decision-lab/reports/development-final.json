@@ -1,0 +1,1116 @@
+[
+  {
+    "engine": "chat",
+    "mode": "rag",
+    "model": "qwen3:1.7b",
+    "ok": true,
+    "result": {
+      "route": "mejora",
+      "ready": true,
+      "urgency_level": 0,
+      "probabilities": null,
+      "confidence": null,
+      "ready_probability": null,
+      "urgency_score": null,
+      "urgency_probabilities": null
+    },
+    "raw": {
+      "model": "qwen3:1.7b",
+      "created_at": "2026-10-02T18:47:09.1873458Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"route\": \"mejora\", \"ready\": true, \"urgency_level\": 0}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 657640500,
+      "load_duration": 2593500,
+      "prompt_eval_count": 884,
+      "prompt_eval_cached_count": 115,
+      "prompt_eval_duration": 364500000,
+      "eval_count": 22,
+      "eval_duration": 221482000
+    },
+    "sources": [
+      {
+        "id": "dev-aa",
+        "title": "Catálogo desarrollo Duna: AA-11",
+        "source": "data/documents/dev-aa.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "AA-11 significa habilitar un permiso de lectura en Duna.",
+        "retrieval_score": 15.932853
+      },
+      {
+        "id": "cat-rd56",
+        "title": "Catálogo Vela: RD-56",
+        "source": "data/documents/cat-rd56.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "RD-56 es la propuesta de incorporar exportación de tareas a CSV en Vela. Esa capacidad no existe todavía y requiere un desarrollo nuevo; no es corregir una función existente.",
+        "retrieval_score": 0.731114
+      }
+    ],
+    "metrics": {
+      "wall_seconds": 0.677622799994424,
+      "retrieval_seconds": 0.0010046999959740788,
+      "inference_seconds": 0.6766152000054717,
+      "server_seconds": 0.6576405,
+      "load_seconds": 0.0025935,
+      "input_tokens": 884,
+      "output_tokens": 22
+    },
+    "packet": {
+      "original_requirement": "Tramiten AA-11 de Duna para completar su propósito. No hay impacto operativo actual.",
+      "suggested_owner": "Producto",
+      "status": "ficha_preparada",
+      "impact": "rutina",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D01",
+    "expected": {
+      "route": "acceso",
+      "ready": true,
+      "urgency_level": 0
+    }
+  },
+  {
+    "engine": "chat",
+    "mode": "rag",
+    "model": "qwen3:1.7b",
+    "ok": true,
+    "result": {
+      "route": "revision",
+      "ready": true,
+      "urgency_level": 0,
+      "probabilities": null,
+      "confidence": null,
+      "ready_probability": null,
+      "urgency_score": null,
+      "urgency_probabilities": null
+    },
+    "raw": {
+      "model": "qwen3:1.7b",
+      "created_at": "2026-10-02T18:47:09.5420186Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"route\": \"revision\", \"ready\": true, \"urgency_level\": 0}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 352594800,
+      "load_duration": 3150500,
+      "prompt_eval_count": 888,
+      "prompt_eval_cached_count": 667,
+      "prompt_eval_duration": 61121000,
+      "eval_count": 23,
+      "eval_duration": 280816000
+    },
+    "sources": [
+      {
+        "id": "dev-bb",
+        "title": "Catálogo desarrollo Pino: BB-22",
+        "source": "data/documents/dev-bb.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "BB-22 identifica el ajuste del valor monetario cobrado en una factura de Pino.",
+        "retrieval_score": 15.650852
+      },
+      {
+        "id": "cat-rd56",
+        "title": "Catálogo Vela: RD-56",
+        "source": "data/documents/cat-rd56.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "RD-56 es la propuesta de incorporar exportación de tareas a CSV en Vela. Esa capacidad no existe todavía y requiere un desarrollo nuevo; no es corregir una función existente.",
+        "retrieval_score": 0.731114
+      }
+    ],
+    "metrics": {
+      "wall_seconds": 0.35462209999968763,
+      "retrieval_seconds": 0.0010194000060437247,
+      "inference_seconds": 0.3535995999991428,
+      "server_seconds": 0.3525948,
+      "load_seconds": 0.0031505,
+      "input_tokens": 888,
+      "output_tokens": 23
+    },
+    "packet": {
+      "original_requirement": "Tramiten BB-22 de Pino para completar su propósito. No hay impacto operativo actual.",
+      "suggested_owner": "Revisión de alcance",
+      "status": "pendiente_revision",
+      "impact": "rutina",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D02",
+    "expected": {
+      "route": "facturacion",
+      "ready": true,
+      "urgency_level": 0
+    }
+  },
+  {
+    "engine": "chat",
+    "mode": "rag",
+    "model": "qwen3:1.7b",
+    "ok": true,
+    "result": {
+      "route": "incidente",
+      "ready": true,
+      "urgency_level": 0,
+      "probabilities": null,
+      "confidence": null,
+      "ready_probability": null,
+      "urgency_score": null,
+      "urgency_probabilities": null
+    },
+    "raw": {
+      "model": "qwen3:1.7b",
+      "created_at": "2026-10-02T18:47:09.8445095Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"route\": \"incidente\", \"ready\": true, \"urgency_level\": 0}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 281448100,
+      "load_duration": 2746500,
+      "prompt_eval_count": 892,
+      "prompt_eval_cached_count": 667,
+      "prompt_eval_duration": 63988000,
+      "eval_count": 21,
+      "eval_duration": 208120000
+    },
+    "sources": [
+      {
+        "id": "dev-cc",
+        "title": "Catálogo desarrollo Olmo: CC-33",
+        "source": "data/documents/dev-cc.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "CC-33 identifica una avería de la búsqueda existente de Olmo, sin relación con permisos o dinero.",
+        "retrieval_score": 15.38854
+      },
+      {
+        "id": "cat-rd56",
+        "title": "Catálogo Vela: RD-56",
+        "source": "data/documents/cat-rd56.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "RD-56 es la propuesta de incorporar exportación de tareas a CSV en Vela. Esa capacidad no existe todavía y requiere un desarrollo nuevo; no es corregir una función existente.",
+        "retrieval_score": 0.731114
+      }
+    ],
+    "metrics": {
+      "wall_seconds": 0.30247950000921264,
+      "retrieval_seconds": 0.0009671000007074326,
+      "inference_seconds": 0.3015099000040209,
+      "server_seconds": 0.2814481,
+      "load_seconds": 0.0027465,
+      "input_tokens": 892,
+      "output_tokens": 21
+    },
+    "packet": {
+      "original_requirement": "Tramiten CC-33 de Olmo para completar su propósito. No hay impacto operativo actual.",
+      "suggested_owner": "Soporte de aplicación",
+      "status": "ficha_preparada",
+      "impact": "rutina",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D03",
+    "expected": {
+      "route": "incidente",
+      "ready": true,
+      "urgency_level": 0
+    }
+  },
+  {
+    "engine": "chat",
+    "mode": "rag",
+    "model": "qwen3:1.7b",
+    "ok": true,
+    "result": {
+      "route": "mejora",
+      "ready": true,
+      "urgency_level": 0,
+      "probabilities": null,
+      "confidence": null,
+      "ready_probability": null,
+      "urgency_score": null,
+      "urgency_probabilities": null
+    },
+    "raw": {
+      "model": "qwen3:1.7b",
+      "created_at": "2026-10-02T18:47:10.1549324Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"route\": \"mejora\", \"ready\": true, \"urgency_level\": 0}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 285567700,
+      "load_duration": 2852900,
+      "prompt_eval_count": 891,
+      "prompt_eval_cached_count": 667,
+      "prompt_eval_duration": 59138000,
+      "eval_count": 22,
+      "eval_duration": 216890000
+    },
+    "sources": [
+      {
+        "id": "dev-dd",
+        "title": "Catálogo desarrollo FaroDemo: DD-44",
+        "source": "data/documents/dev-dd.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "DD-44 corresponde a una capacidad futura de agenda de tareas de FaroDemo que aún no existe.",
+        "retrieval_score": 15.990378
+      },
+      {
+        "id": "cat-rd56",
+        "title": "Catálogo Vela: RD-56",
+        "source": "data/documents/cat-rd56.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "RD-56 es la propuesta de incorporar exportación de tareas a CSV en Vela. Esa capacidad no existe todavía y requiere un desarrollo nuevo; no es corregir una función existente.",
+        "retrieval_score": 0.731114
+      }
+    ],
+    "metrics": {
+      "wall_seconds": 0.31074299999454524,
+      "retrieval_seconds": 0.000978600000962615,
+      "inference_seconds": 0.3097619000036502,
+      "server_seconds": 0.2855677,
+      "load_seconds": 0.0028529,
+      "input_tokens": 891,
+      "output_tokens": 22
+    },
+    "packet": {
+      "original_requirement": "Tramiten DD-44 de FaroDemo para completar su propósito. No hay impacto operativo actual.",
+      "suggested_owner": "Producto",
+      "status": "ficha_preparada",
+      "impact": "rutina",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D04",
+    "expected": {
+      "route": "mejora",
+      "ready": true,
+      "urgency_level": 0
+    }
+  },
+  {
+    "engine": "chat",
+    "mode": "rag",
+    "model": "qwen3:1.7b",
+    "ok": true,
+    "result": {
+      "route": "acceso",
+      "ready": true,
+      "urgency_level": 1,
+      "probabilities": null,
+      "confidence": null,
+      "ready_probability": null,
+      "urgency_score": null,
+      "urgency_probabilities": null
+    },
+    "raw": {
+      "model": "qwen3:1.7b",
+      "created_at": "2026-10-02T18:47:10.3753572Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"route\":\"acceso\",\"ready\":true,\"urgency_level\":1}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 218092100,
+      "load_duration": 2883800,
+      "prompt_eval_count": 782,
+      "prompt_eval_cached_count": 664,
+      "prompt_eval_duration": 37012000,
+      "eval_count": 17,
+      "eval_duration": 171969000
+    },
+    "sources": [
+      {
+        "id": "noise-seguridad",
+        "title": "Glosario de seguridad",
+        "source": "data/documents/noise-seguridad.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "Una contraseña es una credencial. Nunca se habilitan accesos automáticamente a partir de la probabilidad de un modelo.",
+        "retrieval_score": 2.661948
+      }
+    ],
+    "metrics": {
+      "wall_seconds": 0.2201057999918703,
+      "retrieval_seconds": 0.0009826999885262921,
+      "inference_seconds": 0.21912090000114404,
+      "server_seconds": 0.2180921,
+      "load_seconds": 0.0028838,
+      "input_tokens": 782,
+      "output_tokens": 17
+    },
+    "packet": {
+      "original_requirement": "Necesito recuperar mi contraseña del portal; puedo seguir temporalmente con el canal autorizado.",
+      "suggested_owner": "Administración de acceso",
+      "status": "ficha_preparada",
+      "impact": "parcial",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D05",
+    "expected": {
+      "route": "acceso",
+      "ready": true,
+      "urgency_level": 1
+    }
+  },
+  {
+    "engine": "chat",
+    "mode": "rag",
+    "model": "qwen3:1.7b",
+    "ok": true,
+    "result": {
+      "route": "revision",
+      "ready": true,
+      "urgency_level": 0,
+      "probabilities": null,
+      "confidence": null,
+      "ready_probability": null,
+      "urgency_score": null,
+      "urgency_probabilities": null
+    },
+    "raw": {
+      "model": "qwen3:1.7b",
+      "created_at": "2026-10-02T18:47:10.5822437Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"route\":\"revision\",\"ready\":true,\"urgency_level\":0}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 182214100,
+      "load_duration": 2807300,
+      "prompt_eval_count": 691,
+      "prompt_eval_cached_count": 664,
+      "prompt_eval_duration": 19336000,
+      "eval_count": 16,
+      "eval_duration": 154017000
+    },
+    "sources": [],
+    "metrics": {
+      "wall_seconds": 0.2070638000004692,
+      "retrieval_seconds": 0.0009245999972335994,
+      "inference_seconds": 0.20613770000636578,
+      "server_seconds": 0.1822141,
+      "load_seconds": 0.0028073,
+      "input_tokens": 691,
+      "output_tokens": 16
+    },
+    "packet": {
+      "original_requirement": "Hola, hagan algo con eso.",
+      "suggested_owner": "Revisión de alcance",
+      "status": "pendiente_revision",
+      "impact": "rutina",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D06",
+    "expected": {
+      "route": "revision",
+      "ready": false,
+      "urgency_level": 0
+    }
+  },
+  {
+    "engine": "decision",
+    "mode": "rag",
+    "model": "nimble:9b-q4_K_M",
+    "ok": true,
+    "result": {
+      "route": "acceso",
+      "ready": true,
+      "urgency_level": 0,
+      "probabilities": {
+        "incidente": 0.005612640444037227,
+        "mejora": 0.02281047429282299,
+        "acceso": 0.96804089176801,
+        "facturacion": 0.0006968938206688189,
+        "revision": 0.0028390996744609943
+      },
+      "confidence": 0.8953160027210988,
+      "ready_probability": 0.9882320065891868,
+      "urgency_score": 0.537827462894008,
+      "urgency_probabilities": {
+        "0": 0.7018281055774469,
+        "1": 0.05851632595109836,
+        "2": 0.2396555684714548
+      }
+    },
+    "raw": {
+      "model": "nimble:9b-q4_K_M",
+      "answers": {
+        "route": {
+          "type": "choice",
+          "choice": "acceso",
+          "probabilities": {
+            "incidente": 0.005612640444037227,
+            "mejora": 0.02281047429282299,
+            "acceso": 0.96804089176801,
+            "facturacion": 0.0006968938206688189,
+            "revision": 0.0028390996744609943
+          },
+          "confidence": 0.8953160027210988
+        },
+        "ready": {
+          "type": "noul",
+          "noul": 0.9882320065891868
+        },
+        "urgency": {
+          "type": "score",
+          "score": 0.537827462894008,
+          "legend": {
+            "0": "Rutina: sin impacto operativo actual declarado, petición futura o información.",
+            "1": "Parcial: inconveniente operativo para una parte de usuarios o existe una alternativa temporal.",
+            "2": "Bloqueante: se declara indisponibilidad total de una operación crítica o de todo el equipo, sin alternativa."
+          },
+          "probabilities": {
+            "0": 0.7018281055774469,
+            "1": 0.05851632595109836,
+            "2": 0.2396555684714548
+          },
+          "confidence": 0.3109942255779029
+        }
+      },
+      "usage": {
+        "input_tokens": 2665,
+        "output_tokens": 4
+      }
+    },
+    "sources": [
+      {
+        "id": "dev-aa",
+        "title": "Catálogo desarrollo Duna: AA-11",
+        "source": "data/documents/dev-aa.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "AA-11 significa habilitar un permiso de lectura en Duna.",
+        "retrieval_score": 15.932853
+      },
+      {
+        "id": "cat-rd56",
+        "title": "Catálogo Vela: RD-56",
+        "source": "data/documents/cat-rd56.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "RD-56 es la propuesta de incorporar exportación de tareas a CSV en Vela. Esa capacidad no existe todavía y requiere un desarrollo nuevo; no es corregir una función existente.",
+        "retrieval_score": 0.731114
+      }
+    ],
+    "metrics": {
+      "wall_seconds": 9.089654099996551,
+      "retrieval_seconds": 0.0008189999934984371,
+      "inference_seconds": 9.088832399997045,
+      "server_seconds": null,
+      "load_seconds": null,
+      "input_tokens": 2665,
+      "output_tokens": 4
+    },
+    "packet": {
+      "original_requirement": "Tramiten AA-11 de Duna para completar su propósito. No hay impacto operativo actual.",
+      "suggested_owner": "Administración de acceso",
+      "status": "ficha_preparada",
+      "impact": "rutina",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D01",
+    "expected": {
+      "route": "acceso",
+      "ready": true,
+      "urgency_level": 0
+    }
+  },
+  {
+    "engine": "decision",
+    "mode": "rag",
+    "model": "nimble:9b-q4_K_M",
+    "ok": true,
+    "result": {
+      "route": "facturacion",
+      "ready": true,
+      "urgency_level": 0,
+      "probabilities": {
+        "incidente": 0.0010232701021922457,
+        "mejora": 0.003182290625452085,
+        "acceso": 0.00010238440398214406,
+        "facturacion": 0.9955909844150619,
+        "revision": 0.00010107045331168992
+      },
+      "confidence": 0.9803575503372332,
+      "ready_probability": 0.95327028257711,
+      "urgency_score": 0.17753065377377392,
+      "urgency_probabilities": {
+        "0": 0.8301680192075837,
+        "1": 0.1621333078110586,
+        "2": 0.007698672981357655
+      }
+    },
+    "raw": {
+      "model": "nimble:9b-q4_K_M",
+      "answers": {
+        "route": {
+          "type": "choice",
+          "choice": "facturacion",
+          "probabilities": {
+            "incidente": 0.0010232701021922457,
+            "mejora": 0.003182290625452085,
+            "acceso": 0.00010238440398214406,
+            "facturacion": 0.9955909844150619,
+            "revision": 0.00010107045331168992
+          },
+          "confidence": 0.9803575503372332
+        },
+        "ready": {
+          "type": "noul",
+          "noul": 0.95327028257711
+        },
+        "urgency": {
+          "type": "score",
+          "score": 0.17753065377377392,
+          "legend": {
+            "0": "Rutina: sin impacto operativo actual declarado, petición futura o información.",
+            "1": "Parcial: inconveniente operativo para una parte de usuarios o existe una alternativa temporal.",
+            "2": "Bloqueante: se declara indisponibilidad total de una operación crítica o de todo el equipo, sin alternativa."
+          },
+          "probabilities": {
+            "0": 0.8301680192075837,
+            "1": 0.1621333078110586,
+            "2": 0.007698672981357655
+          },
+          "confidence": 0.5567507833818253
+        }
+      },
+      "usage": {
+        "input_tokens": 2668,
+        "output_tokens": 4
+      }
+    },
+    "sources": [
+      {
+        "id": "dev-bb",
+        "title": "Catálogo desarrollo Pino: BB-22",
+        "source": "data/documents/dev-bb.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "BB-22 identifica el ajuste del valor monetario cobrado en una factura de Pino.",
+        "retrieval_score": 15.650852
+      },
+      {
+        "id": "cat-rd56",
+        "title": "Catálogo Vela: RD-56",
+        "source": "data/documents/cat-rd56.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "RD-56 es la propuesta de incorporar exportación de tareas a CSV en Vela. Esa capacidad no existe todavía y requiere un desarrollo nuevo; no es corregir una función existente.",
+        "retrieval_score": 0.731114
+      }
+    ],
+    "metrics": {
+      "wall_seconds": 2.4572484999953303,
+      "retrieval_seconds": 0.0013018000026931986,
+      "inference_seconds": 2.4559432999958517,
+      "server_seconds": null,
+      "load_seconds": null,
+      "input_tokens": 2668,
+      "output_tokens": 4
+    },
+    "packet": {
+      "original_requirement": "Tramiten BB-22 de Pino para completar su propósito. No hay impacto operativo actual.",
+      "suggested_owner": "Atención de facturación",
+      "status": "ficha_preparada",
+      "impact": "rutina",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D02",
+    "expected": {
+      "route": "facturacion",
+      "ready": true,
+      "urgency_level": 0
+    }
+  },
+  {
+    "engine": "decision",
+    "mode": "rag",
+    "model": "nimble:9b-q4_K_M",
+    "ok": true,
+    "result": {
+      "route": "incidente",
+      "ready": true,
+      "urgency_level": 0,
+      "probabilities": {
+        "incidente": 0.9929149433661278,
+        "mejora": 0.004543326303447958,
+        "acceso": 0.00031528227544201556,
+        "facturacion": 0.00024426405779526933,
+        "revision": 0.001982183997186861
+      },
+      "confidence": 0.9698797354010373,
+      "ready_probability": 0.5443718704930779,
+      "urgency_score": 0.011136478997421553,
+      "urgency_probabilities": {
+        "0": 0.9909265422237079,
+        "1": 0.0070104365551625,
+        "2": 0.002063021221129526
+      }
+    },
+    "raw": {
+      "model": "nimble:9b-q4_K_M",
+      "answers": {
+        "route": {
+          "type": "choice",
+          "choice": "incidente",
+          "probabilities": {
+            "incidente": 0.9929149433661278,
+            "mejora": 0.004543326303447958,
+            "acceso": 0.00031528227544201556,
+            "facturacion": 0.00024426405779526933,
+            "revision": 0.001982183997186861
+          },
+          "confidence": 0.9698797354010373
+        },
+        "ready": {
+          "type": "noul",
+          "noul": 0.5443718704930779
+        },
+        "urgency": {
+          "type": "score",
+          "score": 0.011136478997421553,
+          "legend": {
+            "0": "Rutina: sin impacto operativo actual declarado, petición futura o información.",
+            "1": "Parcial: inconveniente operativo para una parte de usuarios o existe una alternativa temporal.",
+            "2": "Bloqueante: se declara indisponibilidad total de una operación crítica o de todo el equipo, sin alternativa."
+          },
+          "probabilities": {
+            "0": 0.9909265422237079,
+            "1": 0.0070104365551625,
+            "2": 0.002063021221129526
+          },
+          "confidence": 0.9485138750593662
+        }
+      },
+      "usage": {
+        "input_tokens": 2689,
+        "output_tokens": 4
+      }
+    },
+    "sources": [
+      {
+        "id": "dev-cc",
+        "title": "Catálogo desarrollo Olmo: CC-33",
+        "source": "data/documents/dev-cc.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "CC-33 identifica una avería de la búsqueda existente de Olmo, sin relación con permisos o dinero.",
+        "retrieval_score": 15.38854
+      },
+      {
+        "id": "cat-rd56",
+        "title": "Catálogo Vela: RD-56",
+        "source": "data/documents/cat-rd56.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "RD-56 es la propuesta de incorporar exportación de tareas a CSV en Vela. Esa capacidad no existe todavía y requiere un desarrollo nuevo; no es corregir una función existente.",
+        "retrieval_score": 0.731114
+      }
+    ],
+    "metrics": {
+      "wall_seconds": 2.4708744999952614,
+      "retrieval_seconds": 0.0012130999966757372,
+      "inference_seconds": 2.4696582999895327,
+      "server_seconds": null,
+      "load_seconds": null,
+      "input_tokens": 2689,
+      "output_tokens": 4
+    },
+    "packet": {
+      "original_requirement": "Tramiten CC-33 de Olmo para completar su propósito. No hay impacto operativo actual.",
+      "suggested_owner": "Soporte de aplicación",
+      "status": "ficha_preparada",
+      "impact": "rutina",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D03",
+    "expected": {
+      "route": "incidente",
+      "ready": true,
+      "urgency_level": 0
+    }
+  },
+  {
+    "engine": "decision",
+    "mode": "rag",
+    "model": "nimble:9b-q4_K_M",
+    "ok": true,
+    "result": {
+      "route": "mejora",
+      "ready": true,
+      "urgency_level": 0,
+      "probabilities": {
+        "incidente": 0.008168847639070536,
+        "mejora": 0.9879566815521215,
+        "acceso": 0.00019871996182069864,
+        "facturacion": 0.0002597478214521479,
+        "revision": 0.0034160030255351048
+      },
+      "confidence": 0.9537227647836148,
+      "ready_probability": 0.9929477706561095,
+      "urgency_score": 0.019350298379903055,
+      "urgency_probabilities": {
+        "0": 0.9809526243938823,
+        "1": 0.018744452832332194,
+        "2": 0.00030292277378543016
+      }
+    },
+    "raw": {
+      "model": "nimble:9b-q4_K_M",
+      "answers": {
+        "route": {
+          "type": "choice",
+          "choice": "mejora",
+          "probabilities": {
+            "incidente": 0.008168847639070536,
+            "mejora": 0.9879566815521215,
+            "acceso": 0.00019871996182069864,
+            "facturacion": 0.0002597478214521479,
+            "revision": 0.0034160030255351048
+          },
+          "confidence": 0.9537227647836148
+        },
+        "ready": {
+          "type": "noul",
+          "noul": 0.9929477706561095
+        },
+        "urgency": {
+          "type": "score",
+          "score": 0.019350298379903055,
+          "legend": {
+            "0": "Rutina: sin impacto operativo actual declarado, petición futura o información.",
+            "1": "Parcial: inconveniente operativo para una parte de usuarios o existe una alternativa temporal.",
+            "2": "Bloqueante: se declara indisponibilidad total de una operación crítica o de todo el equipo, sin alternativa."
+          },
+          "probabilities": {
+            "0": 0.9809526243938823,
+            "1": 0.018744452832332194,
+            "2": 0.00030292277378543016
+          },
+          "confidence": 0.9127416295781117
+        }
+      },
+      "usage": {
+        "input_tokens": 2674,
+        "output_tokens": 4
+      }
+    },
+    "sources": [
+      {
+        "id": "dev-dd",
+        "title": "Catálogo desarrollo FaroDemo: DD-44",
+        "source": "data/documents/dev-dd.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "DD-44 corresponde a una capacidad futura de agenda de tareas de FaroDemo que aún no existe.",
+        "retrieval_score": 15.990378
+      },
+      {
+        "id": "cat-rd56",
+        "title": "Catálogo Vela: RD-56",
+        "source": "data/documents/cat-rd56.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "RD-56 es la propuesta de incorporar exportación de tareas a CSV en Vela. Esa capacidad no existe todavía y requiere un desarrollo nuevo; no es corregir una función existente.",
+        "retrieval_score": 0.731114
+      }
+    ],
+    "metrics": {
+      "wall_seconds": 2.4767382999998517,
+      "retrieval_seconds": 0.001240400000824593,
+      "inference_seconds": 2.4754948999907356,
+      "server_seconds": null,
+      "load_seconds": null,
+      "input_tokens": 2674,
+      "output_tokens": 4
+    },
+    "packet": {
+      "original_requirement": "Tramiten DD-44 de FaroDemo para completar su propósito. No hay impacto operativo actual.",
+      "suggested_owner": "Producto",
+      "status": "ficha_preparada",
+      "impact": "rutina",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D04",
+    "expected": {
+      "route": "mejora",
+      "ready": true,
+      "urgency_level": 0
+    }
+  },
+  {
+    "engine": "decision",
+    "mode": "rag",
+    "model": "nimble:9b-q4_K_M",
+    "ok": true,
+    "result": {
+      "route": "acceso",
+      "ready": true,
+      "urgency_level": 1,
+      "probabilities": {
+        "incidente": 0.0020330553651694886,
+        "mejora": 0.04365740990651329,
+        "acceso": 0.9509759897907974,
+        "facturacion": 0.0005213951145930213,
+        "revision": 0.002812149822926726
+      },
+      "confidence": 0.8648156588108653,
+      "ready_probability": 0.9951758477755378,
+      "urgency_score": 1.0141474017748415,
+      "urgency_probabilities": {
+        "0": 0.006533214747148284,
+        "1": 0.972786168730862,
+        "2": 0.020680616521989787
+      }
+    },
+    "raw": {
+      "model": "nimble:9b-q4_K_M",
+      "answers": {
+        "route": {
+          "type": "choice",
+          "choice": "acceso",
+          "probabilities": {
+            "incidente": 0.0020330553651694886,
+            "mejora": 0.04365740990651329,
+            "acceso": 0.9509759897907974,
+            "facturacion": 0.0005213951145930213,
+            "revision": 0.002812149822926726
+          },
+          "confidence": 0.8648156588108653
+        },
+        "ready": {
+          "type": "noul",
+          "noul": 0.9951758477755378
+        },
+        "urgency": {
+          "type": "score",
+          "score": 1.0141474017748415,
+          "legend": {
+            "0": "Rutina: sin impacto operativo actual declarado, petición futura o información.",
+            "1": "Parcial: inconveniente operativo para una parte de usuarios o existe una alternativa temporal.",
+            "2": "Bloqueante: se declara indisponibilidad total de una operación crítica o de todo el equipo, sin alternativa."
+          },
+          "probabilities": {
+            "0": 0.006533214747148284,
+            "1": 0.972786168730862,
+            "2": 0.020680616521989787
+          },
+          "confidence": 0.8726404448846734
+        }
+      },
+      "usage": {
+        "input_tokens": 2422,
+        "output_tokens": 4
+      }
+    },
+    "sources": [
+      {
+        "id": "noise-seguridad",
+        "title": "Glosario de seguridad",
+        "source": "data/documents/noise-seguridad.md",
+        "version": "2",
+        "section": "Definición del código",
+        "text": "Una contraseña es una credencial. Nunca se habilitan accesos automáticamente a partir de la probabilidad de un modelo.",
+        "retrieval_score": 2.661948
+      }
+    ],
+    "metrics": {
+      "wall_seconds": 2.4141565000027185,
+      "retrieval_seconds": 0.000987200008239597,
+      "inference_seconds": 2.413166700003785,
+      "server_seconds": null,
+      "load_seconds": null,
+      "input_tokens": 2422,
+      "output_tokens": 4
+    },
+    "packet": {
+      "original_requirement": "Necesito recuperar mi contraseña del portal; puedo seguir temporalmente con el canal autorizado.",
+      "suggested_owner": "Administración de acceso",
+      "status": "ficha_preparada",
+      "impact": "parcial",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D05",
+    "expected": {
+      "route": "acceso",
+      "ready": true,
+      "urgency_level": 1
+    }
+  },
+  {
+    "engine": "decision",
+    "mode": "rag",
+    "model": "nimble:9b-q4_K_M",
+    "ok": true,
+    "result": {
+      "route": "incidente",
+      "ready": false,
+      "urgency_level": 0,
+      "probabilities": {
+        "incidente": 0.5390941568899595,
+        "mejora": 0.07034248127905408,
+        "acceso": 0.0016571261818077074,
+        "facturacion": 0.0019981895858752047,
+        "revision": 0.3869080460633034
+      },
+      "confidence": 0.4344432628006849,
+      "ready_probability": 0.02814721748789774,
+      "urgency_score": 0.1390567716445246,
+      "urgency_probabilities": {
+        "0": 0.8781690948372511,
+        "1": 0.10460503868097326,
+        "2": 0.017225866481775664
+      }
+    },
+    "raw": {
+      "model": "nimble:9b-q4_K_M",
+      "answers": {
+        "route": {
+          "type": "choice",
+          "choice": "incidente",
+          "probabilities": {
+            "incidente": 0.5390941568899595,
+            "mejora": 0.07034248127905408,
+            "acceso": 0.0016571261818077074,
+            "facturacion": 0.0019981895858752047,
+            "revision": 0.3869080460633034
+          },
+          "confidence": 0.4344432628006849
+        },
+        "ready": {
+          "type": "noul",
+          "noul": 0.02814721748789774
+        },
+        "urgency": {
+          "type": "score",
+          "score": 0.1390567716445246,
+          "legend": {
+            "0": "Rutina: sin impacto operativo actual declarado, petición futura o información.",
+            "1": "Parcial: inconveniente operativo para una parte de usuarios o existe una alternativa temporal.",
+            "2": "Bloqueante: se declara indisponibilidad total de una operación crítica o de todo el equipo, sin alternativa."
+          },
+          "probabilities": {
+            "0": 0.8781690948372511,
+            "1": 0.10460503868097326,
+            "2": 0.017225866481775664
+          },
+          "confidence": 0.6175165725663747
+        }
+      },
+      "usage": {
+        "input_tokens": 2185,
+        "output_tokens": 4
+      }
+    },
+    "sources": [],
+    "metrics": {
+      "wall_seconds": 2.342661099988618,
+      "retrieval_seconds": 0.0009403000003658235,
+      "inference_seconds": 2.3417192999913823,
+      "server_seconds": null,
+      "load_seconds": null,
+      "input_tokens": 2185,
+      "output_tokens": 4
+    },
+    "packet": {
+      "original_requirement": "Hola, hagan algo con eso.",
+      "suggested_owner": "Soporte de aplicación",
+      "status": "pedir_aclaracion",
+      "impact": "rutina",
+      "next_step": "Validar responsable, alcance e impacto antes de asignar. No se ejecutó ni resolvió el requerimiento.",
+      "acceptance_checklist": [
+        "Confirmar objeto/sistema afectado",
+        "Verificar resultado esperado",
+        "Acordar criterio de aceptación",
+        "Revisar impacto declarado"
+      ]
+    },
+    "case_id": "D06",
+    "expected": {
+      "route": "revision",
+      "ready": false,
+      "urgency_level": 0
+    }
+  }
+]
