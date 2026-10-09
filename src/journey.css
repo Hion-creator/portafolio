@@ -58,3 +58,44 @@ em{font-style:normal;color:var(--accent)}
 }
 @media(max-width:360px){.journey h1,.journey h2{font-size:40px}.journey-controls{gap:8px}.journey-chapters{gap:8px}.journey-note{max-width:280px}.journey-description{font-size:12px}.journey-copy{padding-bottom:160px}.journey-github{padding-inline:5px}.journey-tags li{font-size:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.journey-progress span{will-change:auto}}
+
+/* Original project covers, shared with the interactive journey panels. */
+.project-preview{width:100%;height:100%;text-decoration:none;overflow:hidden}
+.project-preview--lia{background:#f6f7f3;color:#42543c;padding:28px;display:flex;flex-direction:column;justify-content:center}
+.project-preview--decision-lab{display:flex;flex-direction:column;justify-content:space-between;gap:22px;padding:32px;background:radial-gradient(circle at 90% 20%,#2d625747,transparent 50%),#0b1820;color:#e7f3ee}
+.project-preview--decision-lab>span,.project-preview--decision-lab>small{font-size:10px;letter-spacing:.16em;color:#a5f3cb}
+.project-preview--decision-lab strong{font-size:38px;line-height:1.12;letter-spacing:-.04em;font-weight:500}
+.project-preview--decision-lab>div{display:flex;gap:18px;align-items:center}
+.project-preview--decision-lab>div span{border:1px solid #35554c;padding:5px 13px;border-radius:24px;font-size:12px}
+.project-preview--pulso{background:#f5f6f8}.project-preview--pulso img{display:block;width:100%;height:100%;object-fit:cover;object-position:top left}
+.project-work-original{width:100%;min-width:0;aspect-ratio:auto;height:330px}
+.journey-preview{position:absolute;right:max(48px,calc((100vw - 1320px)/2));top:44%;width:clamp(270px,27vw,390px);display:block;border:1px solid #f4ba6870;border-radius:5px;box-shadow:0 12px 60px #0008,0 0 28px #f4ba6824;background:#101815;transform:translateY(-50%) perspective(1000px) rotateY(-8deg);transition:border-color .2s,box-shadow .2s;overflow:hidden}
+.journey-preview:hover,.journey-preview:focus-visible{border-color:#f4ba68;box-shadow:0 12px 60px #0008,0 0 30px #f4ba6845}
+.journey-preview .project-preview{height:250px}
+.journey-preview .project-preview--lia{padding:22px}
+.journey-preview .lia-mini-header{margin-bottom:18px}
+.journey-preview .project-preview--decision-lab{padding:24px;gap:16px}
+.journey-preview .project-preview--decision-lab strong{font-size:32px}
+.journey-preview-caption{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 16px;font-size:11px;letter-spacing:.03em;color:#f5d09c;background:#101815ee}
+.journey-preview-caption>span{display:flex;align-items:center;gap:6px;color:#e3ded3;font-size:10px}
+.journey-chapter[data-preview=true] .journey-chapter-body{max-width:57%}
+.journey[data-static=true] .journey-chapter[data-preview=true]{gap:40px;flex-direction:row-reverse;justify-content:space-between;align-items:center}
+.journey[data-static=true] .journey-preview{position:relative;top:auto;right:auto;flex-shrink:0;transform:perspective(1000px) rotateY(-8deg)}
+@media(max-width:1000px) and (min-width:761px){.journey-preview{right:32px;width:270px}.journey-chapter[data-preview=true] .journey-chapter-body{max-width:56%}.journey-chapter[data-preview=true] h2{font-size:clamp(48px,6.1vw,61px)}}
+@media(max-width:760px){
+  .project-work-original{height:275px}.project-preview--lia{padding:22px}.project-preview--decision-lab{padding:26px}.project-preview--decision-lab strong{font-size:34px}
+  .journey-chapter[data-preview=true]{display:flex;flex-direction:column;gap:20px}
+  .journey-chapter[data-preview=true][hidden]{display:none}
+  .journey-chapter[data-preview=true] .journey-chapter-body{max-width:100%}
+  .journey-preview{position:relative;top:auto;right:auto;transform:none;width:min(100%,350px);align-self:flex-end;flex-shrink:0}
+  .journey-preview .project-preview{height:160px}
+  .journey-preview .project-preview--lia{padding:12px 16px}.journey-preview .lia-mini-header{margin-bottom:8px}.journey-preview .lia-mini-header>span{font-size:20px}.journey-preview .lia-mini-question{padding:5px 9px;font-size:9px}.journey-preview .lia-mini-answer{margin-top:7px;font-size:10px;line-height:1.4}.journey-preview .lia-mini-answer small{font-size:9px}.journey-preview .lia-mini-source{margin-top:6px;padding:5px 8px;font-size:8px}
+  .journey-preview .project-preview--decision-lab{padding:16px;gap:8px}.journey-preview .project-preview--decision-lab strong{font-size:24px}.journey-preview .project-preview--decision-lab>span,.journey-preview .project-preview--decision-lab>small{font-size:8px}.journey-preview .project-preview--decision-lab>div span{font-size:10px;padding:3px 10px}.journey-preview-caption{padding:8px 12px;font-size:10px}
+  .journey-chapter[data-preview=true] h2{font-size:clamp(37px,9vw,56px);margin-bottom:14px}.journey-chapter[data-preview=true] .journey-eyebrow{margin-bottom:12px}.journey-chapter[data-preview=true] .journey-description{margin-bottom:12px}.journey-chapter[data-preview=true] .journey-tags{margin-bottom:14px}
+  .journey[data-static=true] .journey-chapter[data-preview=true]{flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:24px}.journey[data-static=true] .journey-preview{transform:none}
+}
+@media(max-width:760px) and (max-height:760px){
+  .journey-stage:has(.journey-chapter[data-preview=true]:not([hidden])) .journey-topline{display:none}
+  .journey:not([data-static=true]) .journey-copy{padding-bottom:135px}.journey:not([data-static=true]) .journey-chapter[data-preview=true] h2{font-size:34px;margin-bottom:12px}.journey:not([data-static=true]) .journey-chapter[data-preview=true] .journey-description{font-size:12px;line-height:1.6}
+  .journey:not([data-static=true]) .journey-preview .project-preview{height:120px}.journey:not([data-static=true]) .journey-preview .lia-mini-source{display:none}.journey:not([data-static=true]) .journey-preview .project-preview--decision-lab>small{display:none}.journey:not([data-static=true]) .journey-preview .project-preview--decision-lab strong{font-size:22px}.journey:not([data-static=true]) .journey-chapter[data-preview=true]{gap:14px}.journey:not([data-static=true]) .journey-chapter[data-preview=true] .journey-note{margin-top:9px}
+}

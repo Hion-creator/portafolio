@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ArrowUpRight, Github, FileText, Monitor } from "lucide-react";
+import ProjectPreview from './ProjectPreview';
 
 const projects = [
   {
@@ -8,10 +9,7 @@ const projects = [
     meta: "IA LOCAL / EXPERIMENTO REPRODUCIBLE",
     title: "Decision Lab. IA con evidencia.",
     summary: "Comparación de Nimble y Qwen al clasificar requerimientos, con y sin documentos recuperados. Explora respuestas reales, fuentes, errores, tiempos locales y escenarios de costos.",
-    image: "/images/journey/recorrido-04-lab-960.webp",
-    imageAlt: "Arquitectura de cristal con dos estructuras de comparación y un núcleo de luz ámbar",
-    imageWidth: 960,
-    imageHeight: 540,
+    preview: true,
     previewLabel: "Explorar las pruebas reales de Decision Lab",
     demo: "/proyectos/decision-lab/",
     tags: ["Python", "Ollama", "System One", "RAG", "Evaluación"],
@@ -33,10 +31,7 @@ const projects = [
     meta: "INTELIGENCIA ARTIFICIAL / PROYECTO DE TESIS",
     title: "Lia. Un inicio con respuestas.",
     summary: "Un chatbot que explora cómo facilitar la incorporación de nuevos empleados a través de los conocimientos de la empresa y modelos de lenguaje.",
-    image: "/images/journey/recorrido-02-lia-960.webp",
-    imageAlt: "Biblioteca de conocimiento de cristal conectada a un núcleo de luz ámbar",
-    imageWidth: 960,
-    imageHeight: 540,
+    preview: true,
     previewLabel: "Abrir la demo de Lia",
     demo: "/proyectos/lia/",
     tags: ["Python", "Ollama", "FastAPI", "React", "RAG"],
@@ -156,7 +151,11 @@ export default function Projects() {
       <div className="project-work-list">
         {visibleProjects.map((project) => (
           <article className="project-work-card" id={project.id} key={project.id} aria-labelledby={project.id + "-title"}>
-            {project.image ? (
+            {project.preview ? (
+              <a className="project-work-cover project-work-original" href={project.demo} aria-label={project.previewLabel}>
+                <ProjectPreview id={project.id} />
+              </a>
+            ) : project.image ? (
               <a className="project-work-cover" href={project.demo} aria-label={project.previewLabel}>
                 <img src={project.image} alt={project.imageAlt} width={project.imageWidth} height={project.imageHeight} loading="lazy" decoding="async" />
               </a>

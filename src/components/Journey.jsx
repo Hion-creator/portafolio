@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowDown, ArrowUpRight, Github, MoveDown, Pause, Play } from 'lucide-react';
 import { FramePlayer } from '../lib/frame-player';
+import ProjectPreview from './ProjectPreview';
+
+const compactQuery = '(max-height: 620px), (max-width: 760px) and (max-height: 680px)';
 
 const chapters = [
   {
@@ -11,21 +14,21 @@ const chapters = [
     note: 'Ingeniero de sistemas · Desarrollo web e inteligencia artificial',
   },
   {
-    name: 'Lia', file: 'recorrido-02-lia', label: '01 / CONOCIMIENTO · LIA',
+    name: 'Lia', preview: 'lia', file: 'recorrido-02-lia', label: '01 / CONOCIMIENTO · LIA',
     title: <>Conocimiento<br />que <em>responde.</em></>,
     text: 'Un asistente de onboarding para acercar el conocimiento de una organización a las personas que empiezan.',
     tags: ['Ollama', 'Python', 'RAG'], href: '/proyectos/lia/', action: 'Explorar Lia',
     note: 'Proyecto de tesis · Demo pública con respuestas simuladas',
   },
   {
-    name: 'Pulso', file: 'recorrido-03-pulso', label: '02 / AUTOMATIZACIÓN · PULSO',
+    name: 'Pulso', preview: 'pulso', file: 'recorrido-03-pulso', label: '02 / AUTOMATIZACIÓN · PULSO',
     title: <>Automatizar<br />con <em>criterio.</em></>,
     text: 'Organizar solicitudes, preparar respuestas y mantener a la persona a cargo de cada decisión.',
     tags: ['Angular', 'FastAPI', 'Ollama'], href: '/proyectos/pulso/', action: 'Probar Pulso',
     note: 'Copiloto local con IA · Demo pública con reglas y plantillas',
   },
   {
-    name: 'Decision Lab', file: 'recorrido-04-lab', label: '03 / EVALUACIÓN · DECISION LAB',
+    name: 'Decision Lab', preview: 'decision-lab', file: 'recorrido-04-lab', label: '03 / EVALUACIÓN · DECISION LAB',
     title: <>Decisiones<br />con <em>evidencia.</em></>,
     text: 'Comparar modelos, revisar sus fuentes y entender qué mejora cuando una decisión tiene contexto.',
     tags: ['Nimble vs. Qwen', 'RAG', 'Evaluación local'], href: '/proyectos/decision-lab/', action: 'Explorar los resultados',
@@ -52,12 +55,12 @@ export default function Journey() {
   const [active, setActive] = useState(0);
   const [motion, setMotion] = useState(readMotionPreference);
   const [saveData, setSaveData] = useState(() => Boolean(navigator.connection?.saveData));
-  const [compact, setCompact] = useState(() => window.matchMedia('(max-height: 620px)').matches);
+  const [compact, setCompact] = useState(() => window.matchMedia(compactQuery).matches);
   const isStatic = motion.system || motion.manual || saveData || compact;
 
   useEffect(() => {
     const media = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const shortScreen = window.matchMedia('(max-height: 620px)');
+    const shortScreen = window.matchMedia(compactQuery);
     const onChange = () => setMotion(previous => ({ ...previous, system: media.matches }));
     const onConnection = () => setSaveData(Boolean(navigator.connection?.saveData));
     const onSize = () => setCompact(shortScreen.matches);
@@ -152,8 +155,12 @@ export default function Journey() {
         <div className="journey-topline wrap" aria-hidden="true"><span>INFORMACIÓN → CONTEXTO → ACCIÓN</span><span>PORTAFOLIO / 2026</span></div>
         <div className="journey-copy wrap">
           {chapters.map((chapter, index) => (
-            <article className="journey-chapter" id={`journey-${index}`} key={chapter.file} hidden={!isStatic && active !== index}>
+            <article className="journey-chapter" id={`journey-${index}`} key={chapter.file} hidden={!isStatic && active !== index} data-preview={Boolean(chapter.preview)}>
               {isStatic && <img className="journey-static-art" src={`/images/journey/${chapter.file}-960.webp`} alt="" width="960" height="540" loading={index === 0 ? 'eager' : 'lazy'} />}
+              {chapter.preview && <a className="journey-preview" href={chapter.href} aria-label={`Abrir demo de ${chapter.name}`}>
+                <ProjectPreview id={chapter.preview} />
+                <span className="journey-preview-caption">{chapter.name} <span>Explorar demo <ArrowUpRight size={14} aria-hidden="true" /></span></span>
+              </a>}
               <div className="journey-chapter-body">
                 <p className="eyebrow journey-eyebrow"><span className="signal-dot" aria-hidden="true" />{chapter.label}</p>
                 <h2>{chapter.title}</h2>
