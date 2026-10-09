@@ -1,39 +1,45 @@
-# Andres Salazar · Desarrollo Web & IA Aplicada
+# Andres Salazar · Desarrollo web e IA aplicada
 
-Portafolio en React y Vite, orientado a presentar experiencia profesional y proyectos con evidencia. Incluye Lia, una propuesta de onboarding con IA, y Sunthers, un sitio para una comunidad gaming.
+Portafolio en React y Vite: un recorrido visual por Entrada, Lia, Pulso y Decision Lab, seguido de proyectos, perfil, tecnologías, trayectoria y contacto. Sitio público: https://andressalazar.tech.
 
 ## Desarrollo
 
-Requiere Node.js 22 y npm.
+Requiere Node.js 22 o posterior y npm.
 
 ```sh
 npm ci
 npm run dev
-npm run lint
+npm test
 npm run build
 npm run preview
 ```
 
-El sitio público es https://andressalazar.tech. La base `/` y `public/CNAME` corresponden al dominio personalizado de GitHub Pages. `npm run deploy` compila y publica en la rama `gh-pages`; conserva el dominio y el archivo `.nojekyll` incluidos en `public/`.
+`npm run deploy` compila y publica en `gh-pages`. La base `/`, `public/CNAME` y `.nojekyll` conservan el dominio de GitHub Pages. La herramienta de lint existente sigue disponible con `npm run lint`.
 
-## Contenido
+## Recorrido
 
-- `src/App.jsx`: portada, perfil, tecnologías, trayectoria y pie.
-- `src/components/Projects.jsx`: proyectos, filtros y detalles.
-- `src/components/Contact.jsx`: correo, teléfono y formulario para preparar un mensaje.
-- `src/components/Navbar.jsx`: navegación accesible y menú móvil.
-- `src/components/NeuralScene.jsx`: red neuronal de partículas con Canvas 2D, reacción al cursor, pausa y movimiento reducido.
-- `src/index.css`: diseño y adaptación responsive.
-- `docs/AUDITORIA.md`: hallazgos, límites y propuestas de nuevos proyectos.
+- `src/components/Journey.jsx`: cuatro capítulos, scroll nativo y controles accesibles.
+- `src/lib/frame-player.js`: carga progresiva de WebP, tres solicitudes simultáneas y doce imágenes decodificadas como máximo. Libera imágenes y cancela solicitudes obsoletas.
+- `src/journey.css`: recorrido y presentación de proyectos.
+- `public/media/journey/manifest.json`: duración, resolución y rutas.
+- `tests/frame-player.test.mjs`: memoria acotada, recuperación visual ante fallos y cierre de imágenes que terminan de decodificarse después de desmontar el componente.
 
-El contacto abre la aplicación de correo del visitante y **no envía mensajes automáticamente**. La dirección se puede copiar como alternativa. No se recopilan ni registran datos del formulario en un servidor.
+El movimiento depende del scroll, sin reproducción automática ni bucle de animación en reposo. Se activa una vista estática con `prefers-reduced-motion`, ahorro de datos, pantallas de hasta 620 px de alto o el control del visitante. Si fallan los fotogramas, permanecen las imágenes de cada capítulo. El navegador carga imágenes cercanas al punto actual, no los videos originales.
 
-No hay descarga de CV hasta disponer de un archivo o enlace real. La presentación pública de Lia no se etiqueta como demo. El código de Lia permanece privado. EMCALI figura como experiencia anterior; queda pendiente completar su fecha de finalización.
+Transiciones generadas con Seedance 2.5 en Higgsfield: tres clips de cuatro segundos, 720p, sin audio y con imagen inicial/final. Costo cotizado total: 84 créditos; límite autorizado: 100. Las imágenes son una dirección artística del portafolio, no capturas de los productos.
 
-La visualización de la portada usa Canvas 2D y no necesita WebGL ni una espera de carga. La animación se detiene fuera de pantalla o cuando la pestaña está oculta, limita su frecuencia a 30 fps y respeta `prefers-reduced-motion`. Se conservan las dependencias existentes; los componentes antiguos sin uso quedan recuperables en el historial Git.
+Para reconstruir los fotogramas con los clips originales y FFmpeg:
 
-## Validación en este entorno
+```powershell
+./scripts/prepare-journey.ps1 -InputDirectory 'ruta/a/los/clips' -Ffmpeg 'ruta/a/ffmpeg.exe'
+```
 
-Compilación y lint correctos; auditoría npm sin alertas el 9 de septiembre de 2026. La compilación requirió `vite build --configLoader native` para evitar una limitación de lectura del entorno Windows aislado. La configuración y los comandos estándar del proyecto siguen disponibles para instalaciones normales.
+Se esperan `transicion-01.mp4`, `transicion-02.mp4` y `transicion-03.mp4`. Se extraen 144 imágenes por variante: 1280 × 720 para escritorio y 960 × 540 para móvil.
 
-La comprobación HTTP de los enlaces públicos no sustituye pruebas de interacción o una revisión visual en varios dispositivos. Consulta los límites y datos pendientes en la auditoría.
+## Contenido y límites
+
+`Projects.jsx` conserva cinco proyectos y filtros. Lia muestra datos ficticios y respuestas simuladas; su sistema local permanece privado. Pulso utiliza reglas y plantillas en la demo pública. Decision Lab presenta resultados guardados de inferencias locales y 24 casos ficticios. EspacioClip Studio presenta una captura real de 32 segundos y mantiene su código privado. Sunthers conserva sus enlaces públicos.
+
+El contacto prepara un correo en la aplicación del visitante; no envía mensajes automáticamente ni registra datos en un servidor. Se conserva la información profesional existente. EMCALI figura como experiencia anterior con fecha pendiente. No se ofrece descarga de CV sin un archivo real.
+
+No se agregaron dependencias. Los componentes históricos quedan disponibles para referencia. `docs/AUDITORIA.md` conserva la auditoría anterior y sus datos pendientes.
