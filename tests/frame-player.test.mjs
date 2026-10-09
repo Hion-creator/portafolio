@@ -24,6 +24,22 @@ function fixture(t, fail = () => false) {
   return { canvas, classes, bitmaps, draws };
 }
 
+test('Scene tracking follows the decoded frame actually shown and resets on poster fallback', async t => {
+  const f=fixture(t), reported=[];
+  let fallbacks=0;
+  const player=new FramePlayer(f.canvas,manifest,{onFrame:index=>reported.push(index),onFallback:()=>fallbacks++});
+  t.after(()=>player.destroy());
+  player.seek(0);
+  await settle();
+  assert.equal(reported.at(-1),0);
+  globalThis.fetch=()=>new Promise(()=>{});
+  player.seek(6/99);
+  assert.equal(reported.at(-1),3,'Tracking must match the nearby decoded frame, not the pending target');
+  const previous=fallbacks;
+  player.seek(1);
+  assert.ok(fallbacks>previous,'Poster fallback must restore its own glass corner mapping');
+});
+
 test('Decoded frame memory stays bounded and destroy closes all retained bitmaps', async t => {
   const f = fixture(t);
   const player = new FramePlayer(f.canvas, manifest);

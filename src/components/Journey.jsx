@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowDown, ArrowUpRight, Github, MoveDown, Pause, Play } from 'lucide-react';
 import { FramePlayer } from '../lib/frame-player';
-import ProjectPreview from './ProjectPreview';
+import SceneSurfaces from './SceneSurfaces';
 
 const compactQuery = '(max-height: 620px), (max-width: 760px) and (max-height: 680px)';
 
@@ -50,6 +50,7 @@ export default function Journey() {
   const root = useRef(null);
   const canvas = useRef(null);
   const player = useRef(null);
+  const scene = useRef(null);
   const activeRef = useRef(0);
   const progress = useRef(0);
   const [active, setActive] = useState(0);
@@ -82,7 +83,10 @@ export default function Journey() {
       .then(response => response.ok ? response.json() : Promise.reject(new Error('Manifest unavailable')))
       .then(manifest => {
         if (disposed || !manifest.frameCount) return;
-        player.current = new FramePlayer(canvas.current, manifest);
+        player.current = new FramePlayer(canvas.current, manifest, {
+          onFrame: index => scene.current?.frame(index),
+          onFallback: () => scene.current?.poster(activeRef.current),
+        });
         player.current.seek(progress.current);
       })
       .catch(() => { /* The responsive keyframes remain visible if media cannot load. */ });
@@ -110,6 +114,7 @@ export default function Journey() {
         setActive(next);
       }
       player.current?.seek(value);
+      if (!player.current) scene.current?.poster(next);
     };
     const schedule = () => { if (!scheduled) scheduled = requestAnimationFrame(update); };
     window.addEventListener('scroll', schedule, { passive: true });
@@ -150,17 +155,17 @@ export default function Journey() {
             </picture>
           ))}
           {!isStatic && <canvas ref={canvas} className="journey-canvas" />}
+          <SceneSurfaces ref={scene} />
         </div>}
         <div className="journey-shade" aria-hidden="true" />
         <div className="journey-topline wrap" aria-hidden="true"><span>INFORMACIÓN → CONTEXTO → ACCIÓN</span><span>PORTAFOLIO / 2026</span></div>
         <div className="journey-copy wrap">
           {chapters.map((chapter, index) => (
             <article className="journey-chapter" id={`journey-${index}`} key={chapter.file} hidden={!isStatic && active !== index} data-preview={Boolean(chapter.preview)}>
-              {isStatic && <img className="journey-static-art" src={`/images/journey/${chapter.file}-960.webp`} alt="" width="960" height="540" loading={index === 0 ? 'eager' : 'lazy'} />}
-              {chapter.preview && <a className="journey-preview" href={chapter.href} aria-label={`Abrir demo de ${chapter.name}`}>
-                <ProjectPreview id={chapter.preview} />
-                <span className="journey-preview-caption">{chapter.name} <span>Explorar demo <ArrowUpRight size={14} aria-hidden="true" /></span></span>
-              </a>}
+              {isStatic && <div className="journey-static-world" aria-hidden="true">
+                <img className="journey-static-art" src={`/images/journey/${chapter.file}-960.webp`} alt="" width="960" height="540" loading={index === 0 ? 'eager' : 'lazy'} />
+                <SceneSurfaces poster={index} />
+              </div>}
               <div className="journey-chapter-body">
                 <p className="eyebrow journey-eyebrow"><span className="signal-dot" aria-hidden="true" />{chapter.label}</p>
                 <h2>{chapter.title}</h2>

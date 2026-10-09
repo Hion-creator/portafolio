@@ -1,10 +1,12 @@
 // Load only nearby frames, bound decoded memory, and discard obsolete requests.
 // Scroll input stays native; this controller never runs an idle animation loop.
 export class FramePlayer {
-  constructor(canvas, manifest) {
+  constructor(canvas, manifest, { onFrame, onFallback } = {}) {
     this.canvas = canvas;
     this.context = canvas.getContext('2d', { alpha: false });
     this.manifest = manifest;
+    this.onFrame = onFrame;
+    this.onFallback = onFallback;
     this.cache = new Map();
     this.pending = new Map();
     this.failed = new Set();
@@ -39,11 +41,12 @@ export class FramePlayer {
       if (nearest !== undefined && Math.abs(nearest - index) <= 3) index = nearest;
     }
     const frame = this.cache.get(index);
-    if (!frame) { this.canvas.classList.remove('is-ready'); return; }
+    if (!frame) { this.canvas.classList.remove('is-ready'); this.onFallback?.(); return; }
     this.cache.delete(index);
     this.cache.set(index, frame);
     this.context.drawImage(frame, 0, 0, this.canvas.width, this.canvas.height);
     this.canvas.classList.add('is-ready');
+    this.onFrame?.(index);
   }
 
   pump() {
