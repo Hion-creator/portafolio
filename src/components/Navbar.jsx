@@ -39,10 +39,9 @@ export default function Navbar() {
           className={`nav-links ${open ? "is-open" : ""}`}
         >
           {[
-            ["Proyectos", "projects"],
+            ["Proyectos IA", "projects"],
             ["Sobre mí", "about"],
-            ["Tecnologías", "tech"],
-            ["Experiencia", "experience"],
+            ["Trayectoria", "experience"],
             ["Contacto", "contact"],
           ].map(([title, id]) => (
             <a key={id} href={`#${id}`} onClick={() => setOpen(false)}>

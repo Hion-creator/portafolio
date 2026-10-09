@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "desktop": {
+    "height": 720,
+    "path": "/media/journey/desktop",
+    "width": 1280
+  },
+  "frameCount": 144,
+  "mobile": {
+    "height": 540,
+    "path": "/media/journey/mobile",
+    "width": 960
+  },
+  "duration": 12,
+  "fps": 12
+}

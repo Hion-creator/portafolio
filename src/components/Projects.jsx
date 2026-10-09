@@ -1,219 +1,195 @@
 import { useState } from "react";
-import {
-  ArrowUpRight,
-  Github,
-  FileText,
-  Monitor,
-} from "lucide-react";
+import { ArrowUpRight, Github, FileText, Monitor } from "lucide-react";
+
+const projects = [
+  {
+    id: "decision-lab",
+    categories: ["ia"],
+    meta: "IA LOCAL / EXPERIMENTO REPRODUCIBLE",
+    title: "Decision Lab. IA con evidencia.",
+    summary: "Comparación de Nimble y Qwen al clasificar requerimientos, con y sin documentos recuperados. Explora respuestas reales, fuentes, errores, tiempos locales y escenarios de costos.",
+    image: "/images/journey/recorrido-04-lab-960.webp",
+    imageAlt: "Arquitectura de cristal con dos estructuras de comparación y un núcleo de luz ámbar",
+    imageWidth: 960,
+    imageHeight: 540,
+    previewLabel: "Explorar las pruebas reales de Decision Lab",
+    demo: "/proyectos/decision-lab/",
+    tags: ["Python", "Ollama", "System One", "RAG", "Evaluación"],
+    footnote: "Resultados de inferencias locales guardadas. El navegador no ejecuta un modelo.",
+    detailsTitle: "Qué demuestra este proyecto",
+    details: [
+      ["Mi rol", "diseño del experimento, construcción del flujo y revisión de resultados con asistencia de IA."],
+      ["Prueba", "24 casos ficticios, dos repeticiones y tres condiciones por modelo: sin contexto, RAG y fuente correcta como diagnóstico. Permisos, vigencia y contrato de salida se validan en el backend."],
+      ["Publicación", "resultados guardados de inferencias locales; no ejecuta un modelo en el navegador. El código permite reproducir las pruebas con Ollama. Los costos humanos y eléctricos son supuestos ajustables."],
+    ],
+    links: [
+      { label: "Explorar evidencia", href: "/proyectos/decision-lab/" },
+      { label: "Código", href: "https://github.com/Hion-creator/portafolio/tree/main/projects/decision-lab", icon: Github, external: true },
+    ],
+  },
+  {
+    id: "lia",
+    categories: ["ia"],
+    meta: "INTELIGENCIA ARTIFICIAL / PROYECTO DE TESIS",
+    title: "Lia. Un inicio con respuestas.",
+    summary: "Un chatbot que explora cómo facilitar la incorporación de nuevos empleados a través de los conocimientos de la empresa y modelos de lenguaje.",
+    image: "/images/journey/recorrido-02-lia-960.webp",
+    imageAlt: "Biblioteca de conocimiento de cristal conectada a un núcleo de luz ámbar",
+    imageWidth: 960,
+    imageHeight: 540,
+    previewLabel: "Abrir la demo de Lia",
+    demo: "/proyectos/lia/",
+    tags: ["Python", "Ollama", "FastAPI", "React", "RAG"],
+    footnote: "Demo pública con datos ficticios y respuestas simuladas. Sistema con modelos locales en repositorio privado.",
+    detailsTitle: "Enfoque del proyecto",
+    details: [
+      ["Problema", "acceder a la información necesaria al incorporarse a una organización."],
+      ["Propuesta", "una interfaz conversacional con IA generativa y modelos locales, orientada al onboarding empresarial."],
+      ["Mi rol", "liderazgo del desarrollo. La demo pública permite explorar preguntas, fuentes y el recorrido de bienvenida con datos ficticios y respuestas simuladas. El sistema con modelos locales permanece en el repositorio privado."],
+    ],
+    links: [
+      { label: "Probar demo", href: "/proyectos/lia/" },
+      { label: "Ver presentación", href: "https://hion-creator.github.io/presentacion-chatbot/", icon: FileText, external: true },
+    ],
+    privateCode: true,
+  },
+  {
+    id: "pulso",
+    categories: ["ia", "frontend"],
+    meta: "ANGULAR / TAILWIND / ASISTENCIA CON IA",
+    title: "Pulso. Soporte con intención.",
+    summary: "Un panel de atención al cliente para organizar tickets, priorizar solicitudes y preparar respuestas con ayuda de un copiloto. Cada sugerencia queda en manos de la persona.",
+    image: "/images/pulso-desktop.png",
+    imageAlt: "Pulso: bandeja de soporte con tickets y copiloto",
+    imageWidth: 1440,
+    imageHeight: 1220,
+    previewLabel: "Abrir la demo de Pulso",
+    demo: "/proyectos/pulso/",
+    tags: ["Angular", "Tailwind CSS", "TypeScript", "Python", "Ollama"],
+    footnote: "La demo pública utiliza reglas y plantillas. La integración con Ollama se ejecuta de forma local.",
+    detailsTitle: "Qué demuestra este proyecto",
+    details: [
+      ["Frontend", "Signals, rutas diferidas, formularios reactivos y una interfaz adaptable. Tickets, filtros, métricas y borradores persistidos en el navegador."],
+      ["IA", "integración local con Ollama a través de FastAPI, con respuestas estructuradas y revisión humana. La demo pública utiliza reglas y plantillas; no ejecuta un modelo de IA."],
+      ["Validación", "pruebas de API y recorridos en navegador. Los datos son ficticios y no se envían mensajes a clientes."],
+    ],
+    links: [
+      { label: "Probar demo", href: "/proyectos/pulso/" },
+      { label: "Código", href: "https://github.com/Hion-creator/portafolio/tree/main/projects/pulso", icon: Github, external: true },
+    ],
+  },
+  {
+    id: "espacioclip",
+    categories: ["ia"],
+    meta: "IA LOCAL / VIDEO / V1 EN DESARROLLO",
+    title: "EspacioClip Studio. Del directo al clip.",
+    summary: "Un editor local para convertir momentos de streams en clips verticales: juego y cámara separados, títulos configurables, subtítulos editables y revisión de intervalos con pitidos.",
+    image: "/proyectos/espacioclip/portada.jpg",
+    imageAlt: "EspacioClip Studio: del directo al clip",
+    imageWidth: 1920,
+    imageHeight: 1080,
+    previewLabel: "Ver el video de EspacioClip Studio",
+    demo: "/proyectos/espacioclip/",
+    tags: ["Python", "FastAPI", "Whisper", "FFmpeg", "Ollama"],
+    footnote: "Presentación de 32 segundos con capturas reales. Procesamiento local y código privado.",
+    detailsTitle: "Enfoque y estado del proyecto",
+    details: [
+      ["Mi rol", "definición del producto, diseño del flujo y desarrollo iterativo con asistencia de IA."],
+      ["Estado", "primera versión funcional para Windows. En evolución: precisión de subtítulos, instalación y pruebas con más creadores."],
+      ["Presentación", "recorrido visual de 32 segundos con capturas reales. El procesamiento y el código del producto permanecen privados."],
+    ],
+    links: [{ label: "Ver video", href: "/proyectos/espacioclip/" }],
+    privateCode: true,
+  },
+  {
+    id: "sunthers",
+    categories: ["frontend"],
+    meta: "FRONTEND / SITIO WEB",
+    title: "Sunthers. Una identidad compartida.",
+    summary: "Sitio web para un gremio de videojuegos. Una experiencia responsive que reúne información de la comunidad, sus miembros y actividades.",
+    tags: ["React", "JavaScript", "CSS", "Responsive"],
+    footnote: "Desarrollo frontend adaptable. Código disponible en WebWarbone 0.1.",
+    detailsTitle: "Enfoque del proyecto",
+    details: [
+      ["Objetivo", "dar a la comunidad un espacio propio en la web."],
+      ["Implementación", "desarrollo frontend y adaptación de la interfaz a distintos tamaños de pantalla. El código está disponible en WebWarbone 0.1."],
+    ],
+    links: [
+      { label: "Visitar sitio", href: "https://sunthers.games/", external: true },
+      { label: "Código", href: "https://github.com/Hion-creator/webwarbone0.1", icon: Github, external: true },
+    ],
+  },
+];
+
+const filters = [
+  { id: "ia", label: "IA aplicada" },
+  { id: "all", label: "Todos" },
+  { id: "frontend", label: "Frontend" },
+];
+
+function belongsToFilter(project, filter) {
+  return filter === "all" || project.categories.includes(filter);
+}
+
 export default function Projects() {
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState("ia");
+  const visibleProjects = projects.filter((project) => belongsToFilter(project, filter));
+
   return (
     <section className="section wrap" id="projects">
       <div className="section-heading heading-row">
         <div>
-          <p className="eyebrow">01 / PROYECTOS SELECCIONADOS</p>
-          <h2>Ideas llevadas al código.</h2>
+          <p className="eyebrow">01 / IA APLICADA EN PROYECTOS</p>
+          <h2>De la idea a la evidencia.</h2>
         </div>
         <div className="filters" role="group" aria-label="Filtrar proyectos">
-          {[
-            ["all", "Todos"],
-            ["ia", "IA aplicada"],
-            ["frontend", "Frontend"],
-          ].map(([id, label]) => (
-            <button
-              key={id}
-              aria-pressed={filter === id}
-              onClick={() => setFilter(id)}
-            >
-              {label}
+          {filters.map(({ id, label }) => (
+            <button key={id} type="button" aria-pressed={filter === id} onClick={() => setFilter(id)}>
+              {label} <span className="filter-count">{projects.filter((project) => belongsToFilter(project, id)).length}</span>
             </button>
           ))}
         </div>
       </div>
-      <p className="sr-only" role="status">
-        {filter === "all" ? "5 proyectos" : filter === "ia" ? "4 proyectos" : "2 proyectos"}
+      <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">
+        {visibleProjects.length} proyectos: {filters.find(({ id }) => id === filter).label}.
       </p>
-      <div className="project-grid">
-        {filter !== "frontend" && (
-          <article className="project-card" id="decision-lab">
-            <a className="decision-preview" href="/proyectos/decision-lab/" aria-label="Explorar las pruebas reales de Decision Lab">
-              <span>DECISION LAB / OLLAMA LOCAL</span>
-              <strong>Decidir mejor.<br />Con contexto.</strong>
-              <div><span>Nimble</span><span>↔</span><span>Qwen</span></div>
-              <small>RAG · CALIDAD · TIEMPOS · COSTOS</small>
-            </a>
-            <div className="project-content">
-              <p className="eyebrow">IA LOCAL / EXPERIMENTO REPRODUCIBLE</p>
-              <h3>Decision Lab. IA con evidencia.</h3>
-              <p>Comparación de Nimble y Qwen al clasificar requerimientos, con y sin documentos recuperados. Explora respuestas reales, fuentes, errores, tiempos locales y escenarios de costos.</p>
-              <div className="tags">{["Python", "Ollama", "System One", "RAG", "Evaluación"].map(t => <span key={t}>{t}</span>)}</div>
+      <div className="project-work-list">
+        {visibleProjects.map((project) => (
+          <article className="project-work-card" id={project.id} key={project.id} aria-labelledby={project.id + "-title"}>
+            {project.image ? (
+              <a className="project-work-cover" href={project.demo} aria-label={project.previewLabel}>
+                <img src={project.image} alt={project.imageAlt} width={project.imageWidth} height={project.imageHeight} loading="lazy" decoding="async" />
+              </a>
+            ) : (
+              <div className="project-work-cover sunthers-visual">
+                <div className="visual-caption"><Monitor size={18} aria-hidden="true" /><span>SUNTHERS / COMUNIDAD GAMING</span></div>
+                <div className="sunthers-mark" aria-hidden="true">S<span>/</span></div>
+                <small>COMUNIDAD · EXPERIENCIA WEB</small>
+              </div>
+            )}
+            <div className="project-work-content">
+              <p className="project-work-meta eyebrow">{project.meta}</p>
+              <h3 className="project-work-title" id={project.id + "-title"}>{project.title}</h3>
+              <p className="project-work-summary">{project.summary}</p>
+              <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+              <p className="project-work-footnote">{project.footnote}</p>
               <details>
-                <summary>Qué demuestra este proyecto</summary>
-                <p><strong>Mi rol:</strong> diseño del experimento, construcción del flujo y revisión de resultados con asistencia de IA.</p>
-                <p><strong>Prueba:</strong> 24 casos ficticios, dos repeticiones y tres condiciones por modelo: sin contexto, RAG y fuente correcta como diagnóstico. Permisos, vigencia y contrato de salida se validan en el backend.</p>
-                <p><strong>Publicación:</strong> resultados guardados de inferencias locales; no ejecuta un modelo en el navegador. El código permite reproducir las pruebas con Ollama. Los costos humanos y eléctricos son supuestos ajustables.</p>
+                <summary>{project.detailsTitle}</summary>
+                {project.details.map(([label, text]) => <p key={label}><strong>{label}:</strong> {text}</p>)}
               </details>
               <div className="project-links">
-                <a href="/proyectos/decision-lab/">Explorar evidencia <ArrowUpRight size={17} /></a>
-                <a href="https://github.com/Hion-creator/portafolio/tree/main/projects/decision-lab" target="_blank" rel="noreferrer"><Github size={17} /> Código</a>
-              </div>
-            </div>
-          </article>
-        )}
-
-        {filter !== "frontend" && (
-          <article className="project-card" id="espacioclip">
-            <a href="/proyectos/espacioclip/" aria-label="Ver el video de EspacioClip Studio">
-              <img src="/proyectos/espacioclip/portada.jpg" alt="EspacioClip Studio: del directo al clip" loading="lazy" width="1920" height="1080" style={{ width: "100%", height: "auto", display: "block" }} />
-            </a>
-            <div className="project-content">
-              <p className="eyebrow">IA LOCAL / VIDEO / V1 EN DESARROLLO</p>
-              <h3>EspacioClip Studio. Del directo al clip.</h3>
-              <p>Un editor local para convertir momentos de streams en clips verticales: juego y cámara separados, títulos configurables, subtítulos editables y revisión de intervalos con pitidos.</p>
-              <div className="tags">{["Python", "FastAPI", "Whisper", "FFmpeg", "Ollama"].map(t => <span key={t}>{t}</span>)}</div>
-              <details>
-                <summary>Enfoque y estado del proyecto</summary>
-                <p><strong>Mi rol:</strong> definición del producto, diseño del flujo y desarrollo iterativo con asistencia de IA.</p>
-                <p><strong>Estado:</strong> primera versión funcional para Windows. En evolución: precisión de subtítulos, instalación y pruebas con más creadores.</p>
-                <p><strong>Presentación:</strong> recorrido visual de 32 segundos con capturas reales. El procesamiento y el código del producto permanecen privados.</p>
-              </details>
-              <div className="project-links"><a href="/proyectos/espacioclip/">Ver video <ArrowUpRight size={17} /></a><span className="muted">Código privado</span></div>
-            </div>
-          </article>
-        )}
-
-        <article className="project-card pulso-card" id="pulso">
-          <a className="pulso-preview" href="/proyectos/pulso/" aria-label="Abrir la demo de Pulso">
-            <img src="/images/pulso-desktop.png" alt="Pulso: bandeja de soporte con tickets y copiloto" loading="lazy" width="1440" height="1220" />
-          </a>
-          <div className="project-content">
-            <p className="eyebrow">ANGULAR / TAILWIND / ASISTENCIA CON IA</p>
-            <h3>Pulso. Soporte con intención.</h3>
-            <p>Un panel de atención al cliente para organizar tickets, priorizar solicitudes y preparar respuestas con ayuda de un copiloto. Cada sugerencia queda en manos de la persona.</p>
-            <div className="tags">{["Angular", "Tailwind CSS", "TypeScript", "Python", "Ollama"].map(t => <span key={t}>{t}</span>)}</div>
-            <details>
-              <summary>Qué demuestra este proyecto</summary>
-              <p><strong>Frontend:</strong> Signals, rutas diferidas, formularios reactivos y una interfaz adaptable. Tickets, filtros, métricas y borradores persistidos en el navegador.</p>
-              <p><strong>IA:</strong> integración local con Ollama a través de FastAPI, con respuestas estructuradas y revisión humana. La demo pública utiliza reglas y plantillas; no ejecuta un modelo de IA.</p>
-              <p><strong>Validación:</strong> pruebas de API y recorridos en navegador. Los datos son ficticios y no se envían mensajes a clientes.</p>
-            </details>
-            <div className="project-links">
-              <a href="/proyectos/pulso/">Probar demo <ArrowUpRight size={17} /></a>
-              <a href="https://github.com/Hion-creator/portafolio/tree/main/projects/pulso" target="_blank" rel="noreferrer"><Github size={17} /> Código</a>
-            </div>
-          </div>
-        </article>
-        {filter !== "frontend" && (
-          <article className="project-card" id="lia">
-            <a className="lia-demo-preview" href="/proyectos/lia/" aria-label="Abrir la demo de Lia">
-              <div className="lia-mini-header"><span>✦ lia.</span><small>DEMO INTERACTIVA</small></div>
-              <div className="lia-mini-question">¿Qué hago en mi primer día?</div>
-              <div className="lia-mini-answer"><span>✦</span><div>Un nuevo comienzo, con contexto.<br/><small>Conoce al equipo y prepara tus accesos.</small></div></div>
-              <div className="lia-mini-source"><FileText size={14} /> Manual de bienvenida <span>Pág. 1 ↗</span></div>
-            </a>
-            <div className="project-content">
-              <p className="eyebrow">
-                INTELIGENCIA ARTIFICIAL / PROYECTO DE TESIS
-              </p>
-              <h3>Lia. Un inicio con respuestas.</h3>
-              <p>
-                Un chatbot que explora cómo facilitar la incorporación de nuevos
-                empleados a través de los conocimientos de la empresa y modelos
-                de lenguaje.
-              </p>
-              <div className="tags">
-                {["Python", "Ollama", "FastAPI", "React", "RAG"].map((t) => (
-                  <span key={t}>{t}</span>
+                {project.links.map(({ label, href, icon: Icon, external }) => (
+                  <a key={href} href={href} {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+                    {Icon ? <Icon size={17} aria-hidden="true" /> : null}{label}{Icon === Github ? null : <ArrowUpRight size={17} aria-hidden="true" />}
+                  </a>
                 ))}
-              </div>
-              <details>
-                <summary>Enfoque del proyecto</summary>
-                <p>
-                  <strong>Problema:</strong> acceder a la información necesaria
-                  al incorporarse a una organización.
-                </p>
-                <p>
-                  <strong>Propuesta:</strong> una interfaz conversacional con IA
-                  generativa y modelos locales, orientada al onboarding
-                  empresarial.
-                </p>
-                <p>
-                  <strong>Mi rol:</strong> liderazgo del desarrollo. La
-                  demo pública permite explorar preguntas, fuentes y el recorrido de bienvenida con datos ficticios y respuestas simuladas. El sistema con modelos locales permanece en el repositorio privado.
-                </p>
-              </details>
-              <div className="project-links">
-                <a href="/proyectos/lia/">Probar demo <ArrowUpRight size={17} /></a>
-                <a
-                  href="https://hion-creator.github.io/presentacion-chatbot/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FileText size={17} /> Ver presentación{" "}
-                  <ArrowUpRight size={17} />
-                </a>
-                <span className="muted">Código privado</span>
+                {project.privateCode ? <span className="muted">Código privado</span> : null}
               </div>
             </div>
           </article>
-        )}
-        {filter !== "ia" && (
-          <article className="project-card">
-            <div className="project-visual sunthers-visual">
-              <div className="visual-caption">
-                <Monitor size={18} />
-                <span>SUNTHERS / COMUNIDAD GAMING</span>
-              </div>
-              <div className="sunthers-mark" aria-hidden="true">
-                S<span>/</span>
-              </div>
-              <small>COMUNIDAD · EXPERIENCIA WEB</small>
-            </div>
-            <div className="project-content">
-              <p className="eyebrow">FRONTEND / SITIO WEB</p>
-              <h3>Sunthers. Una identidad compartida.</h3>
-              <p>
-                Sitio web para un gremio de videojuegos. Una experiencia
-                responsive que reúne información de la comunidad, sus miembros y
-                actividades.
-              </p>
-              <div className="tags">
-                {["React", "JavaScript", "CSS", "Responsive"].map((t) => (
-                  <span key={t}>{t}</span>
-                ))}
-              </div>
-              <details>
-                <summary>Enfoque del proyecto</summary>
-                <p>
-                  <strong>Objetivo:</strong> dar a la comunidad un espacio
-                  propio en la web.
-                </p>
-                <p>
-                  <strong>Implementación:</strong> desarrollo frontend y
-                  adaptación de la interfaz a distintos tamaños de pantalla. El
-                  código está disponible en WebWarbone 0.1.
-                </p>
-              </details>
-              <div className="project-links">
-                <a
-                  href="https://sunthers.games/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Visitar sitio <ArrowUpRight size={17} />
-                </a>
-                <a
-                  href="https://github.com/Hion-creator/webwarbone0.1"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Github size={17} /> Código
-                </a>
-              </div>
-            </div>
-          </article>
-        )}
+        ))}
       </div>
     </section>
   );
 }
+

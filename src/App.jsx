@@ -1,11 +1,9 @@
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import NeuralScene from "./components/NeuralScene";
+import Journey from "./components/Journey";
 import {
   ArrowUpRight,
-  Github,
-  Linkedin,
   Cpu,
   Code2,
   Workflow,
@@ -19,52 +17,13 @@ export default function App() {
       </a>
       <Navbar />
       <main id="main">
-        <section className="hero wrap" id="hero">
-          <div>
-            <p className="eyebrow">ANDRES SALAZAR / DESARROLLO WEB & IA</p>
-            <h1>
-              Software con propósito.
-              <br />
-              <span>IA aplicada.</span>
-            </h1>
-            <p className="hero-description">
-              Soy Andres, ingeniero de sistemas. Desarrollo experiencias web y
-              exploro cómo los modelos de lenguaje pueden resolver problemas
-              reales, desde el onboarding empresarial hasta la automatización.
-            </p>
-            <div className="actions">
-              <a className="button primary" href="#projects">
-                Explorar proyectos <ArrowUpRight size={19} />
-              </a>
-              <a className="button secondary" href="#contact">
-                Hablemos
-              </a>
-            </div>
-            <div className="socials">
-              <a
-                href="https://github.com/Hion-creator"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Github size={17} /> GitHub
-              </a>
-              <a
-                href="https://www.linkedin.com/in/andres-salazar-1588b71aa/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Linkedin size={17} /> LinkedIn
-              </a>
-            </div>
-          </div>
-          <NeuralScene />
-        </section>
+        <Journey />
         <div className="expertise-strip">
           <div className="wrap">
-            <span>Frontend con intención</span>
-            <span>Modelos de lenguaje</span>
-            <span>Automatización</span>
-            <span>Experiencia de usuario</span>
+            <span><span className="signal-dot" aria-hidden="true" /> IA aplicada a problemas reales</span>
+            <span>Asistentes con contexto</span>
+            <span>Automatización con revisión</span>
+            <span>Evaluación con evidencia</span>
           </div>
         </div>
         <Projects />
@@ -78,8 +37,8 @@ export default function App() {
           </div>
           <div className="about-layout">
             <p className="large-copy">
-              Mi punto de partida es el desarrollo web. Mi siguiente desafío:
-              integrar IA de forma útil en las herramientas que usamos cada día.
+              Una interfaz clara. Un modelo con contexto. Una decisión que se
+              puede revisar. Así conecto desarrollo web e inteligencia artificial.
             </p>
             <div className="body-copy">
               <p>
@@ -89,9 +48,10 @@ export default function App() {
                 mejora de experiencias digitales.
               </p>
               <p>
-                Con Lia, mi proyecto de chatbot para onboarding empresarial,
-                exploro el uso de LLMs, Ollama y LangChain para acercar el
-                conocimiento de una organización a sus nuevos integrantes.
+                Con Lia exploro el onboarding empresarial; con Pulso, la
+                asistencia a equipos de soporte; y con Decision Lab comparo
+                modelos locales y recuperación de documentos. Muestro el código,
+                los límites y la evidencia disponible de cada proyecto.
               </p>
               <a className="text-link" href="#experience">
                 Ver trayectoria <ArrowUpRight size={18} />
@@ -121,7 +81,7 @@ export default function App() {
               {
                 icon: Cpu,
                 title: "Inteligencia artificial",
-                text: "Exploración de asistentes con modelos de lenguaje.",
+                text: "Asistentes, recuperación de documentos y evaluación de modelos locales.",
                 tags: ["Python", "Ollama", "LangChain", "RAG", "FastAPI"],
               },
               {
